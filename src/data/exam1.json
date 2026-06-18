@@ -11,27 +11,27 @@
       "options": [
         {
           "label": "A",
-          "text": "Hadoop YARN, Mesos, and the Standalone Spark Scheduler",
-          "correct": true,
-          "rationale": "Spark can use Hadoop YARN (the standard Hadoop scheduler), a Mesos cluster, or its own simple Standalone Spark Scheduler that ships with Spark."
-        },
-        {
-          "label": "B",
           "text": "Spark SQL, MLlib, and GraphX",
           "correct": false,
           "rationale": "These are higher-level Spark libraries that run on top of Spark Core, not cluster schedulers. The valid schedulers are YARN, Mesos, and the Standalone Spark Scheduler."
         },
         {
-          "label": "C",
-          "text": "HDFS, Amazon S3, and the local file system",
-          "correct": false,
-          "rationale": "These are underlying storage systems, not cluster managers. Spark's scheduler options are YARN, Mesos, and the Standalone Spark Scheduler."
+          "label": "B",
+          "text": "Hadoop YARN, Mesos, and the Standalone Spark Scheduler",
+          "correct": true,
+          "rationale": "Spark can use Hadoop YARN (the standard Hadoop scheduler), a Mesos cluster, or its own simple Standalone Spark Scheduler that ships with Spark."
         },
         {
-          "label": "D",
+          "label": "C",
           "text": "Driver, Executor, and Worker schedulers",
           "correct": false,
           "rationale": "Driver, executor, and worker are runtime roles in a Spark application, not external cluster managers. The cluster managers are YARN, Mesos, and the Standalone Spark Scheduler."
+        },
+        {
+          "label": "D",
+          "text": "HDFS, Amazon S3, and the local file system",
+          "correct": false,
+          "rationale": "These are underlying storage systems, not cluster managers. Spark's scheduler options are YARN, Mesos, and the Standalone Spark Scheduler."
         }
       ]
     },
@@ -44,15 +44,15 @@
       "options": [
         {
           "label": "A",
-          "text": "It contains the main method and defines the workflow, accessing the cluster through a SparkContext object",
-          "correct": true,
-          "rationale": "The driver program contains the main method, defines the workflow, and accesses Spark through the SparkContext, which is its connection to the cluster."
-        },
-        {
-          "label": "B",
           "text": "It is one of the worker processes that runs operations on RDD partitions",
           "correct": false,
           "rationale": "Worker-side processes that run operations on partitions are the executors, not the driver. The driver holds the main method and coordinates via SparkContext."
+        },
+        {
+          "label": "B",
+          "text": "It contains the main method and defines the workflow, accessing the cluster through a SparkContext object",
+          "correct": true,
+          "rationale": "The driver program contains the main method, defines the workflow, and accesses Spark through the SparkContext, which is its connection to the cluster."
         },
         {
           "label": "C",
@@ -77,9 +77,9 @@
       "options": [
         {
           "label": "A",
-          "text": "Term 'Big Data' emerges -> Google introduces MapReduce -> Hadoop is unveiled -> NoSQL and in-memory computing rise",
-          "correct": true,
-          "rationale": "The term emerged in the 1990s, MapReduce came in 2004, Hadoop was unveiled in 2006, and NoSQL/in-memory/cloud characterize the 2010-to-now era, giving this exact order."
+          "text": "Term 'Big Data' emerges -> Hadoop is unveiled -> Google introduces MapReduce -> NoSQL and in-memory computing rise",
+          "correct": false,
+          "rationale": "This swaps Hadoop and MapReduce; MapReduce (2004) preceded Hadoop's unveiling (2006)."
         },
         {
           "label": "B",
@@ -95,9 +95,9 @@
         },
         {
           "label": "D",
-          "text": "Term 'Big Data' emerges -> Hadoop is unveiled -> Google introduces MapReduce -> NoSQL and in-memory computing rise",
-          "correct": false,
-          "rationale": "This swaps Hadoop and MapReduce; MapReduce (2004) preceded Hadoop's unveiling (2006)."
+          "text": "Term 'Big Data' emerges -> Google introduces MapReduce -> Hadoop is unveiled -> NoSQL and in-memory computing rise",
+          "correct": true,
+          "rationale": "The term emerged in the 1990s, MapReduce came in 2004, Hadoop was unveiled in 2006, and NoSQL/in-memory/cloud characterize the 2010-to-now era, giving this exact order."
         }
       ]
     },
@@ -110,27 +110,27 @@
       "options": [
         {
           "label": "A",
-          "text": "Balanced, Atomic, Secure, Encrypted",
+          "text": "Basically Atomic, Strong consistency, Enforced isolation",
           "correct": false,
-          "rationale": "Wrong. These terms are invented and do not match BASE. BASE stands for Basically Available, Soft state, Eventual consistency."
+          "rationale": "Wrong. This mixes in ACID-like properties (strong consistency, isolation). BASE deliberately relaxes those into eventual consistency and soft state."
         },
         {
           "label": "B",
-          "text": "Basically Available, Soft state, Eventual consistency",
-          "correct": true,
-          "rationale": "Correct. BASE expands to Basically Available, Soft state, and Eventual consistency, the relaxed consistency model NoSQL systems favor over strict ACID."
-        },
-        {
-          "label": "C",
           "text": "Bulk Access, Synchronous Execution, Exactly-once",
           "correct": false,
           "rationale": "Wrong. These do not correspond to BASE. The acronym is Basically Available, Soft state, Eventual consistency."
         },
         {
+          "label": "C",
+          "text": "Basically Available, Soft state, Eventual consistency",
+          "correct": true,
+          "rationale": "Correct. BASE expands to Basically Available, Soft state, and Eventual consistency, the relaxed consistency model NoSQL systems favor over strict ACID."
+        },
+        {
           "label": "D",
-          "text": "Basically Atomic, Strong consistency, Enforced isolation",
+          "text": "Balanced, Atomic, Secure, Encrypted",
           "correct": false,
-          "rationale": "Wrong. This mixes in ACID-like properties (strong consistency, isolation). BASE deliberately relaxes those into eventual consistency and soft state."
+          "rationale": "Wrong. These terms are invented and do not match BASE. BASE stands for Basically Available, Soft state, Eventual consistency."
         }
       ]
     },
@@ -143,21 +143,21 @@
       "options": [
         {
           "label": "A",
+          "text": "SQL: nodes and edges; NoSQL: tables and rows",
+          "correct": false,
+          "rationale": "Wrong. Nodes and edges describe a graph NoSQL model, not SQL. SQL uses tables/rows and NoSQL uses non-relational structures."
+        },
+        {
+          "label": "B",
           "text": "SQL: collections, documents, and graphs; NoSQL: tables and rows",
           "correct": false,
           "rationale": "Wrong. This reverses the two. Collections/documents/graphs are the NoSQL models, while tables/rows are the relational (SQL) model."
         },
         {
-          "label": "B",
+          "label": "C",
           "text": "SQL: relational tables and rows; NoSQL: collections, documents, or graphs",
           "correct": true,
           "rationale": "Correct. SQL systems use a relational model of tables and rows, while NoSQL systems use non-relational models such as collections, documents, or graphs."
-        },
-        {
-          "label": "C",
-          "text": "SQL: nodes and edges; NoSQL: tables and rows",
-          "correct": false,
-          "rationale": "Wrong. Nodes and edges describe a graph NoSQL model, not SQL. SQL uses tables/rows and NoSQL uses non-relational structures."
         },
         {
           "label": "D",
@@ -176,15 +176,15 @@
       "options": [
         {
           "label": "A",
-          "text": "Partition pruning",
-          "correct": true,
-          "rationale": "Correct. Organizing files into folder hierarchies by frequently filtered columns lets the engine skip irrelevant partitions; reducing data scanned this way is partition pruning."
-        },
-        {
-          "label": "B",
           "text": "Schema-on-read",
           "correct": false,
           "rationale": "Schema-on-read refers to applying table structure at query time over stored files. It does not describe skipping folders based on filter values, which is partition pruning."
+        },
+        {
+          "label": "B",
+          "text": "Partition pruning",
+          "correct": true,
+          "rationale": "Correct. Organizing files into folder hierarchies by frequently filtered columns lets the engine skip irrelevant partitions; reducing data scanned this way is partition pruning."
         },
         {
           "label": "C",
@@ -209,27 +209,27 @@
       "options": [
         {
           "label": "A",
+          "text": "They store the only authoritative copy of the program's local variables",
+          "correct": false,
+          "rationale": "Local variables live in the driver's process memory, not on executors. Executors hold RDD partitions and a cache and run operations on them."
+        },
+        {
+          "label": "B",
           "text": "They define the workflow and hold the application's main method",
           "correct": false,
           "rationale": "Defining the workflow and holding the main method is the driver's job. Executors are the processes that run the specified operations on RDD partitions."
         },
         {
-          "label": "B",
+          "label": "C",
           "text": "They are processes that run the driver-specified operations on their RDD partition and have a cache",
           "correct": true,
           "rationale": "Worker nodes run the application via executors; each executor runs the operations specified in the driver on its partition of the RDD and has a cache."
         },
         {
-          "label": "C",
+          "label": "D",
           "text": "They allocate cluster resources to competing applications",
           "correct": false,
           "rationale": "Resource allocation is the cluster manager's responsibility. Executors execute the actual RDD operations on their partitions."
-        },
-        {
-          "label": "D",
-          "text": "They store the only authoritative copy of the program's local variables",
-          "correct": false,
-          "rationale": "Local variables live in the driver's process memory, not on executors. Executors hold RDD partitions and a cache and run operations on them."
         }
       ]
     },
@@ -275,15 +275,15 @@
       "options": [
         {
           "label": "A",
-          "text": "Volume",
-          "correct": false,
-          "rationale": "Volume is about sheer data size, not the worth derived from data. The characteristic describing usefulness and business worth is Value."
-        },
-        {
-          "label": "B",
           "text": "Veracity",
           "correct": false,
           "rationale": "Veracity concerns trustworthiness and quality. While higher veracity raises value, the V that names usefulness and business worth itself is Value."
+        },
+        {
+          "label": "B",
+          "text": "Volume",
+          "correct": false,
+          "rationale": "Volume is about sheer data size, not the worth derived from data. The characteristic describing usefulness and business worth is Value."
         },
         {
           "label": "C",
@@ -308,15 +308,15 @@
       "options": [
         {
           "label": "A",
-          "text": "Gold Layer (Curated Zone)",
-          "correct": false,
-          "rationale": "The Gold Layer holds business-ready aggregated data for reporting, not untouched raw source data. Raw, as-received data belongs to the Bronze Layer."
-        },
-        {
-          "label": "B",
           "text": "Bronze Layer (Raw Zone)",
           "correct": true,
           "rationale": "Correct. The Bronze Layer (Raw Zone) stores raw ingested data exactly as received from the source, such as original JSON logs or raw registration files."
+        },
+        {
+          "label": "B",
+          "text": "Platinum Layer (Archive Zone)",
+          "correct": false,
+          "rationale": "There is no Platinum Layer in the Medallion architecture, which consists of Bronze, Silver, and Gold. Raw as-received data is held in the Bronze Layer."
         },
         {
           "label": "C",
@@ -326,9 +326,9 @@
         },
         {
           "label": "D",
-          "text": "Platinum Layer (Archive Zone)",
+          "text": "Gold Layer (Curated Zone)",
           "correct": false,
-          "rationale": "There is no Platinum Layer in the Medallion architecture, which consists of Bronze, Silver, and Gold. Raw as-received data is held in the Bronze Layer."
+          "rationale": "The Gold Layer holds business-ready aggregated data for reporting, not untouched raw source data. Raw, as-received data belongs to the Bronze Layer."
         }
       ]
     },
@@ -341,27 +341,27 @@
       "options": [
         {
           "label": "A",
-          "text": "To enable low-latency random reads of small records",
+          "text": "To allow each replica to hold a different schema of the data",
           "correct": false,
-          "rationale": "HDFS is optimized for high-throughput batch access, not low-latency random reads, and replication does not provide that. Replication exists for fault tolerance and high availability."
+          "rationale": "Replicas are identical copies of the same block, and HDFS is schema-less, so per-replica schemas make no sense. Replication's purpose is fault tolerance and high availability."
         },
         {
           "label": "B",
-          "text": "To compress the data and reduce total storage usage",
-          "correct": false,
-          "rationale": "Replication increases storage usage rather than reducing it, and it is unrelated to compression. Its purpose is fault tolerance and high availability."
-        },
-        {
-          "label": "C",
           "text": "To provide fault tolerance and high availability if a node holding a copy fails",
           "correct": true,
           "rationale": "Replicating each block three times across DataNodes ensures the data remains available and the cluster stays fault tolerant even when a node holding one copy fails."
         },
         {
-          "label": "D",
-          "text": "To allow each replica to hold a different schema of the data",
+          "label": "C",
+          "text": "To compress the data and reduce total storage usage",
           "correct": false,
-          "rationale": "Replicas are identical copies of the same block, and HDFS is schema-less, so per-replica schemas make no sense. Replication's purpose is fault tolerance and high availability."
+          "rationale": "Replication increases storage usage rather than reducing it, and it is unrelated to compression. Its purpose is fault tolerance and high availability."
+        },
+        {
+          "label": "D",
+          "text": "To enable low-latency random reads of small records",
+          "correct": false,
+          "rationale": "HDFS is optimized for high-throughput batch access, not low-latency random reads, and replication does not provide that. Replication exists for fault tolerance and high availability."
         }
       ]
     },
@@ -374,15 +374,15 @@
       "options": [
         {
           "label": "A",
-          "text": "Generality, low latency, fault tolerance, and simplicity",
-          "correct": true,
-          "rationale": "These are exactly the design goals attributed to Spark: handling diverse workloads (generality), achieving sub-second response (low latency), treating faults as the norm (fault tolerance), and offering a simple model that often follows from generality."
-        },
-        {
-          "label": "B",
           "text": "Strong consistency, ACID transactions, and relational normalization",
           "correct": false,
           "rationale": "These are goals of a transactional relational database, not Spark. Spark's stated goals are generality, low latency, fault tolerance, and simplicity, not transactional guarantees."
+        },
+        {
+          "label": "B",
+          "text": "Generality, low latency, fault tolerance, and simplicity",
+          "correct": true,
+          "rationale": "These are exactly the design goals attributed to Spark: handling diverse workloads (generality), achieving sub-second response (low latency), treating faults as the norm (fault tolerance), and offering a simple model that often follows from generality."
         },
         {
           "label": "C",
@@ -407,27 +407,27 @@
       "options": [
         {
           "label": "A",
-          "text": "The JobTracker pushes tasks to idle TaskTrackers as soon as it detects them",
-          "correct": false,
-          "rationale": "MapReduce scheduling is pull-based, not push-based; the JobTracker does not push tasks. TaskTrackers request (pull) tasks from the JobTracker."
-        },
-        {
-          "label": "B",
-          "text": "TaskTrackers pull tasks by sending requests to the JobTracker, which assigns and monitors them",
-          "correct": true,
-          "rationale": "Scheduling is pull-based: TaskTrackers request tasks from the JobTracker, which accepts jobs, assigns Map/Reduce tasks, monitors status, and re-executes failed tasks."
-        },
-        {
-          "label": "C",
           "text": "TaskTrackers assign tasks directly to one another without the JobTracker",
           "correct": false,
           "rationale": "TaskTrackers do not assign work peer-to-peer; the JobTracker is the master that hands out tasks. TaskTrackers pull tasks from the JobTracker, not from each other."
         },
         {
-          "label": "D",
+          "label": "B",
           "text": "The NameNode assigns Map and Reduce tasks to the DataNodes",
           "correct": false,
           "rationale": "The NameNode/DataNode roles belong to HDFS storage, not MapReduce scheduling. Task assignment is done by the JobTracker, with TaskTrackers pulling tasks."
+        },
+        {
+          "label": "C",
+          "text": "The JobTracker pushes tasks to idle TaskTrackers as soon as it detects them",
+          "correct": false,
+          "rationale": "MapReduce scheduling is pull-based, not push-based; the JobTracker does not push tasks. TaskTrackers request (pull) tasks from the JobTracker."
+        },
+        {
+          "label": "D",
+          "text": "TaskTrackers pull tasks by sending requests to the JobTracker, which assigns and monitors them",
+          "correct": true,
+          "rationale": "Scheduling is pull-based: TaskTrackers request tasks from the JobTracker, which accepts jobs, assigns Map/Reduce tasks, monitors status, and re-executes failed tasks."
         }
       ]
     },
@@ -440,27 +440,27 @@
       "options": [
         {
           "label": "A",
-          "text": "About 10 to 100 times faster",
-          "correct": true,
-          "rationale": "For iterative jobs, sharing data between iterations through main memory rather than disk yields roughly a 10x to 100x speedup."
-        },
-        {
-          "label": "B",
           "text": "About 2 to 3 times faster",
           "correct": false,
           "rationale": "This understates the benefit. The in-memory sharing of data between iterations is reported as roughly 10 to 100 times faster than disk-based sharing, not merely 2 to 3 times."
         },
         {
-          "label": "C",
+          "label": "B",
           "text": "Exactly 1000 times faster in all cases",
           "correct": false,
           "rationale": "There is no fixed 1000x guarantee; the speedup depends on the workload. The stated range is approximately 10 to 100 times faster than disk."
         },
         {
-          "label": "D",
+          "label": "C",
           "text": "It is actually slower because memory access is more expensive",
           "correct": false,
           "rationale": "Memory access is far faster than disk, which is the whole point of Spark's design. The in-memory approach is roughly 10 to 100 times faster, not slower."
+        },
+        {
+          "label": "D",
+          "text": "About 10 to 100 times faster",
+          "correct": true,
+          "rationale": "For iterative jobs, sharing data between iterations through main memory rather than disk yields roughly a 10x to 100x speedup."
         }
       ]
     },
@@ -506,27 +506,27 @@
       "options": [
         {
           "label": "A",
-          "text": "The schema-drift problem; enforce a strict schema-on-write before ingestion",
-          "correct": false,
-          "rationale": "Schema drift concerns changing field definitions, not file count overhead. The scenario is about too many tiny files, solved by consolidating into larger files."
-        },
-        {
-          "label": "B",
-          "text": "The small-files problem; consolidate into fewer, larger batched files such as 100 files of 100 MB",
-          "correct": true,
-          "rationale": "Correct. Millions of tiny files create metadata overhead that chokes engines; batching into fewer, larger files (e.g., 100 x 100 MB) minimizes overhead and maximizes throughput."
-        },
-        {
-          "label": "C",
           "text": "The data-swamp problem; deploy a data catalog to map the files",
           "correct": false,
           "rationale": "A data swamp arises from missing metadata that makes data unusable. Here the issue is engine overhead from too many tiny files, fixed by batching them into larger files."
         },
         {
-          "label": "D",
+          "label": "B",
           "text": "The over-partitioning problem; remove all partition folders entirely",
           "correct": false,
           "rationale": "While over-partitioning can cause small files, the fix is not removing all partitions; it is consolidating into fewer larger files. Eliminating partitions would also remove partition pruning benefits."
+        },
+        {
+          "label": "C",
+          "text": "The schema-drift problem; enforce a strict schema-on-write before ingestion",
+          "correct": false,
+          "rationale": "Schema drift concerns changing field definitions, not file count overhead. The scenario is about too many tiny files, solved by consolidating into larger files."
+        },
+        {
+          "label": "D",
+          "text": "The small-files problem; consolidate into fewer, larger batched files such as 100 files of 100 MB",
+          "correct": true,
+          "rationale": "Correct. Millions of tiny files create metadata overhead that chokes engines; batching into fewer, larger files (e.g., 100 x 100 MB) minimizes overhead and maximizes throughput."
         }
       ]
     },
@@ -539,27 +539,27 @@
       "options": [
         {
           "label": "A",
+          "text": "The governance, security, and monitoring layer",
+          "correct": false,
+          "rationale": "Governance, security, and monitoring is an overarching layer enforcing policies and protection; it does not perform the importing and loading, which is ingestion."
+        },
+        {
+          "label": "B",
           "text": "The data ingestion layer",
           "correct": true,
           "rationale": "Data ingestion is the layer that imports and loads data into the platform, using batch or real-time methods, exactly matching this responsibility."
         },
         {
-          "label": "B",
+          "label": "C",
           "text": "The storage and processing layer",
           "correct": false,
           "rationale": "Storage and processing holds and transforms data after it arrives; the act of importing and loading data into the platform is the ingestion layer's job."
         },
         {
-          "label": "C",
+          "label": "D",
           "text": "The analytics and servicing layer",
           "correct": false,
           "rationale": "Analytics and servicing produces insights and reports from already-stored data; bringing the data in is handled by the ingestion layer."
-        },
-        {
-          "label": "D",
-          "text": "The governance, security, and monitoring layer",
-          "correct": false,
-          "rationale": "Governance, security, and monitoring is an overarching layer enforcing policies and protection; it does not perform the importing and loading, which is ingestion."
         }
       ]
     },
@@ -572,9 +572,9 @@
       "options": [
         {
           "label": "A",
-          "text": "Centralized relational databases with a predefined fixed schema",
+          "text": "Reliance on SQL with business intelligence and reporting",
           "correct": false,
-          "rationale": "This IS a traditional characteristic: traditional systems use centralized relational databases with predefined, fixed schemas, so it is not the exception."
+          "rationale": "This IS traditional: traditional systems rely on SQL for BI and reporting, so it belongs to the traditional approach and is not the exception."
         },
         {
           "label": "B",
@@ -584,9 +584,9 @@
         },
         {
           "label": "C",
-          "text": "Reliance on SQL with business intelligence and reporting",
+          "text": "Centralized relational databases with a predefined fixed schema",
           "correct": false,
-          "rationale": "This IS traditional: traditional systems rely on SQL for BI and reporting, so it belongs to the traditional approach and is not the exception."
+          "rationale": "This IS a traditional characteristic: traditional systems use centralized relational databases with predefined, fixed schemas, so it is not the exception."
         },
         {
           "label": "D",
@@ -605,27 +605,27 @@
       "options": [
         {
           "label": "A",
-          "text": "HDFS",
-          "correct": false,
-          "rationale": "HDFS is the distributed storage layer, not the resource manager. Resource management is handled by YARN."
+          "text": "YARN",
+          "correct": true,
+          "rationale": "YARN is the component dedicated to resource management within the Hadoop cluster."
         },
         {
           "label": "B",
-          "text": "ZooKeeper",
-          "correct": false,
-          "rationale": "ZooKeeper provides distributed coordination services, not cluster-wide compute resource management. The resource management layer is YARN."
-        },
-        {
-          "label": "C",
           "text": "MapReduce",
           "correct": false,
           "rationale": "MapReduce is the computing engine/programming model for processing, not resource management. Cluster resources are managed by YARN."
         },
         {
+          "label": "C",
+          "text": "HDFS",
+          "correct": false,
+          "rationale": "HDFS is the distributed storage layer, not the resource manager. Resource management is handled by YARN."
+        },
+        {
           "label": "D",
-          "text": "YARN",
-          "correct": true,
-          "rationale": "YARN is the component dedicated to resource management within the Hadoop cluster."
+          "text": "ZooKeeper",
+          "correct": false,
+          "rationale": "ZooKeeper provides distributed coordination services, not cluster-wide compute resource management. The resource management layer is YARN."
         }
       ]
     },
@@ -638,9 +638,9 @@
       "options": [
         {
           "label": "A",
-          "text": "Columnar storage automatically caches the entire table in memory before computing",
+          "text": "Columnar storage stores each row contiguously to speed up full-record reads",
           "correct": false,
-          "rationale": "The efficiency does not come from caching the whole table; it comes from reading only the needed columns. Caching the entire table would not bypass irrelevant data the way columnar reads do."
+          "rationale": "Storing each row contiguously describes row-based storage. Columnar storage groups data by column, which is exactly what lets it read only the Grade column and skip the rest."
         },
         {
           "label": "B",
@@ -656,9 +656,9 @@
         },
         {
           "label": "D",
-          "text": "Columnar storage stores each row contiguously to speed up full-record reads",
+          "text": "Columnar storage automatically caches the entire table in memory before computing",
           "correct": false,
-          "rationale": "Storing each row contiguously describes row-based storage. Columnar storage groups data by column, which is exactly what lets it read only the Grade column and skip the rest."
+          "rationale": "The efficiency does not come from caching the whole table; it comes from reading only the needed columns. Caching the entire table would not bypass irrelevant data the way columnar reads do."
         }
       ]
     },
@@ -671,15 +671,15 @@
       "options": [
         {
           "label": "A",
-          "text": "Key-value store for cart/session data; document store for the product catalog",
-          "correct": true,
-          "rationale": "Correct. Key-value stores excel at fast cart/session data, and document stores handle product catalogs with varied, flexible attributes, matching the two stated needs."
+          "text": "Document store for cart/session data; graph database for the product catalog",
+          "correct": false,
+          "rationale": "Wrong. Fast carts/sessions are best served by a key-value store, and a varied catalog by a document store. Graph databases are aimed at relationship traversal, not catalogs."
         },
         {
           "label": "B",
-          "text": "Graph database for cart/session data; column-family store for the product catalog",
-          "correct": false,
-          "rationale": "Wrong. Graph databases fit relationship-heavy data like social networks, and column-family stores fit analytics. Carts/sessions suit key-value, and varied catalogs suit document stores."
+          "text": "Key-value store for cart/session data; document store for the product catalog",
+          "correct": true,
+          "rationale": "Correct. Key-value stores excel at fast cart/session data, and document stores handle product catalogs with varied, flexible attributes, matching the two stated needs."
         },
         {
           "label": "C",
@@ -689,9 +689,9 @@
         },
         {
           "label": "D",
-          "text": "Document store for cart/session data; graph database for the product catalog",
+          "text": "Graph database for cart/session data; column-family store for the product catalog",
           "correct": false,
-          "rationale": "Wrong. Fast carts/sessions are best served by a key-value store, and a varied catalog by a document store. Graph databases are aimed at relationship traversal, not catalogs."
+          "rationale": "Wrong. Graph databases fit relationship-heavy data like social networks, and column-family stores fit analytics. Carts/sessions suit key-value, and varied catalogs suit document stores."
         }
       ]
     },
@@ -704,27 +704,27 @@
       "options": [
         {
           "label": "A",
-          "text": "It is the master that stores all metadata, including the mapping and location of files and blocks",
-          "correct": true,
-          "rationale": "The NameNode is the master and holds all metadata: access rights, file/block mapping and locations, timestamps, file counts, DataNode counts, and the transaction log location."
-        },
-        {
-          "label": "B",
           "text": "It is a slave that stores the actual data blocks on its local disk",
           "correct": false,
           "rationale": "Storing actual data blocks is the DataNode's job; DataNodes are the slaves/block servers. The NameNode is the master that stores only metadata, not the data blocks."
         },
         {
-          "label": "C",
-          "text": "It sends periodic block reports to the DataNodes describing what it stores",
-          "correct": false,
-          "rationale": "Block reports flow from DataNodes up to the NameNode, not the reverse. The NameNode receives those reports and tracks metadata; it does not store blocks to report on."
-        },
-        {
-          "label": "D",
+          "label": "B",
           "text": "It executes the user's Map and Reduce tasks on stored data",
           "correct": false,
           "rationale": "Executing Map/Reduce tasks is a processing responsibility (TaskTrackers), unrelated to HDFS metadata management. The NameNode's role is to maintain filesystem metadata."
+        },
+        {
+          "label": "C",
+          "text": "It is the master that stores all metadata, including the mapping and location of files and blocks",
+          "correct": true,
+          "rationale": "The NameNode is the master and holds all metadata: access rights, file/block mapping and locations, timestamps, file counts, DataNode counts, and the transaction log location."
+        },
+        {
+          "label": "D",
+          "text": "It sends periodic block reports to the DataNodes describing what it stores",
+          "correct": false,
+          "rationale": "Block reports flow from DataNodes up to the NameNode, not the reverse. The NameNode receives those reports and tracks metadata; it does not store blocks to report on."
         }
       ]
     },
@@ -749,15 +749,15 @@
         },
         {
           "label": "C",
-          "text": "Column-family store",
-          "correct": false,
-          "rationale": "Wrong. A column-family store organizes data by columns and excels at aggregations over a column. The hash-table, key-only-lookup model is the key-value store."
-        },
-        {
-          "label": "D",
           "text": "Graph database",
           "correct": false,
           "rationale": "Wrong. A graph database stores nodes and edges to traverse relationships. The simple key-to-value hash-table model that cannot query values is the key-value store."
+        },
+        {
+          "label": "D",
+          "text": "Column-family store",
+          "correct": false,
+          "rationale": "Wrong. A column-family store organizes data by columns and excels at aggregations over a column. The hash-table, key-only-lookup model is the key-value store."
         }
       ]
     },
@@ -770,15 +770,15 @@
       "options": [
         {
           "label": "A",
-          "text": "Avro",
-          "correct": true,
-          "rationale": "Correct. Avro is a row-based binary format well suited to data streaming and continuous schema evolution, though it is less ideal for deep analytical column queries."
-        },
-        {
-          "label": "B",
           "text": "Parquet",
           "correct": false,
           "rationale": "Parquet is a columnar binary format built for heavy analytics, not the row-based streaming-and-schema-evolution use case where Avro excels."
+        },
+        {
+          "label": "B",
+          "text": "Avro",
+          "correct": true,
+          "rationale": "Correct. Avro is a row-based binary format well suited to data streaming and continuous schema evolution, though it is less ideal for deep analytical column queries."
         },
         {
           "label": "C",
@@ -803,15 +803,15 @@
       "options": [
         {
           "label": "A",
-          "text": "To enforce relational constraints between RDDs, represented as a normalized schema",
-          "correct": false,
-          "rationale": "Lineage is not about relational constraints or schemas. It records how each RDD was built so lost data can be recomputed, and it is represented as a DAG, not a schema."
-        },
-        {
-          "label": "B",
           "text": "To efficiently recompute data lost to executor failures, represented as a Directed Acyclic Graph (DAG)",
           "correct": true,
           "rationale": "Spark records how each RDD was constructed so it can rebuild data lost when an executor fails; this lineage is represented as a DAG connecting input data and RDDs."
+        },
+        {
+          "label": "B",
+          "text": "To enforce relational constraints between RDDs, represented as a normalized schema",
+          "correct": false,
+          "rationale": "Lineage is not about relational constraints or schemas. It records how each RDD was built so lost data can be recomputed, and it is represented as a DAG, not a schema."
         },
         {
           "label": "C",
@@ -836,21 +836,21 @@
       "options": [
         {
           "label": "A",
-          "text": "Bronze Layer, because raw logs are aggregated directly into dashboards",
-          "correct": false,
-          "rationale": "The Bronze Layer holds raw, unprocessed source data used by Data Engineers, not aggregated dashboard-ready output. Business-ready aggregation occurs in the Gold Layer."
-        },
-        {
-          "label": "B",
           "text": "Silver Layer, because cleaned tables are the final reporting product",
           "correct": false,
           "rationale": "The Silver Layer provides cleaned and standardized data for Data Scientists, but it is not the final aggregated reporting product. Dashboards for BI tools come from the Gold Layer."
         },
         {
-          "label": "C",
+          "label": "B",
           "text": "Gold Layer, because it holds business-ready aggregated data for reporting",
           "correct": true,
           "rationale": "Correct. The Gold Layer (Curated Zone) contains business-ready, aggregated data prepared for reporting and is consumed by Business Analysts and BI tools, such as an attendance-rate dashboard."
+        },
+        {
+          "label": "C",
+          "text": "Bronze Layer, because raw logs are aggregated directly into dashboards",
+          "correct": false,
+          "rationale": "The Bronze Layer holds raw, unprocessed source data used by Data Engineers, not aggregated dashboard-ready output. Business-ready aggregation occurs in the Gold Layer."
         },
         {
           "label": "D",
@@ -881,15 +881,15 @@
         },
         {
           "label": "C",
-          "text": "Oracle Cloud is one of the three major cloud providers identified for big data",
-          "correct": true,
-          "rationale": "This is the inaccurate statement: the three major cloud providers identified are Amazon (AWS), Microsoft (Azure), and Google (Google Cloud); Oracle Cloud is not among them."
-        },
-        {
-          "label": "D",
           "text": "Amazon Web Services, Microsoft Azure, and Google Cloud are the major cloud providers for big data",
           "correct": false,
           "rationale": "This correctly names the three major cloud providers (AWS, Azure, Google Cloud), so it is a true statement and not the inaccurate one."
+        },
+        {
+          "label": "D",
+          "text": "Oracle Cloud is one of the three major cloud providers identified for big data",
+          "correct": true,
+          "rationale": "This is the inaccurate statement: the three major cloud providers identified are Amazon (AWS), Microsoft (Azure), and Google (Google Cloud); Oracle Cloud is not among them."
         }
       ]
     },
@@ -902,27 +902,27 @@
       "options": [
         {
           "label": "A",
-          "text": "It stays fully online and returns the most recent local data on every node",
+          "text": "It ignores the partition and continues accepting writes everywhere",
           "correct": false,
-          "rationale": "Wrong. Staying online and serving local data during a partition is AP behavior (e.g., Cassandra). CP systems instead block access to out-of-sync nodes to avoid stale reads."
+          "rationale": "Wrong. Accepting writes everywhere despite a partition risks inconsistency and is closer to AP behavior. CP systems restrict out-of-sync nodes to keep data consistent."
         },
         {
           "label": "B",
-          "text": "It shuts down access to out-of-sync nodes to prevent stale reads",
-          "correct": true,
-          "rationale": "Correct. A CP-edge system favors consistency: during a partition it cuts off access to out-of-sync nodes so that no stale data is read."
-        },
-        {
-          "label": "C",
           "text": "It permanently deletes data on the minority side of the partition",
           "correct": false,
           "rationale": "Wrong. CP systems do not delete data on partition; they restrict access to out-of-sync nodes temporarily to preserve consistency."
         },
         {
+          "label": "C",
+          "text": "It shuts down access to out-of-sync nodes to prevent stale reads",
+          "correct": true,
+          "rationale": "Correct. A CP-edge system favors consistency: during a partition it cuts off access to out-of-sync nodes so that no stale data is read."
+        },
+        {
           "label": "D",
-          "text": "It ignores the partition and continues accepting writes everywhere",
+          "text": "It stays fully online and returns the most recent local data on every node",
           "correct": false,
-          "rationale": "Wrong. Accepting writes everywhere despite a partition risks inconsistency and is closer to AP behavior. CP systems restrict out-of-sync nodes to keep data consistent."
+          "rationale": "Wrong. Staying online and serving local data during a partition is AP behavior (e.g., Cassandra). CP systems instead block access to out-of-sync nodes to avoid stale reads."
         }
       ]
     },
@@ -935,27 +935,27 @@
       "options": [
         {
           "label": "A",
-          "text": "Relational databases were incapable of running any analytical query whatsoever",
-          "correct": false,
-          "rationale": "Relational databases run analytical queries well at modest scale; the issue was scaling and cost limits at huge volumes, not a total inability to query. The real driver was data exceeding their scale/cost/fault limits."
+          "text": "Exponential data growth exceeded the storage, scalability, and fault-tolerance limits of traditional relational databases and centralized processing",
+          "correct": true,
+          "rationale": "Hadoop emerged because data volumes grew exponentially beyond what relational databases and centralized processing could handle in terms of cost, scalability, fault tolerance, and throughput."
         },
         {
           "label": "B",
-          "text": "Enterprise storage hardware became free, removing all cost concerns",
-          "correct": false,
-          "rationale": "Enterprise storage was expensive, and that high cost was a motivating challenge, not the reverse. Hadoop's appeal was running on inexpensive commodity hardware, not free enterprise storage."
-        },
-        {
-          "label": "C",
           "text": "Government regulation mandated open-source distributed processing",
           "correct": false,
           "rationale": "No regulatory mandate drove Hadoop; technical and economic pressures from exponential data growth did. The actual driver was data outgrowing traditional systems' scalability and fault tolerance."
         },
         {
+          "label": "C",
+          "text": "Enterprise storage hardware became free, removing all cost concerns",
+          "correct": false,
+          "rationale": "Enterprise storage was expensive, and that high cost was a motivating challenge, not the reverse. Hadoop's appeal was running on inexpensive commodity hardware, not free enterprise storage."
+        },
+        {
           "label": "D",
-          "text": "Exponential data growth exceeded the storage, scalability, and fault-tolerance limits of traditional relational databases and centralized processing",
-          "correct": true,
-          "rationale": "Hadoop emerged because data volumes grew exponentially beyond what relational databases and centralized processing could handle in terms of cost, scalability, fault tolerance, and throughput."
+          "text": "Relational databases were incapable of running any analytical query whatsoever",
+          "correct": false,
+          "rationale": "Relational databases run analytical queries well at modest scale; the issue was scaling and cost limits at huge volumes, not a total inability to query. The real driver was data exceeding their scale/cost/fault limits."
         }
       ]
     },
@@ -968,9 +968,9 @@
       "options": [
         {
           "label": "A",
-          "text": "Bronze Layer (Raw Zone)",
-          "correct": false,
-          "rationale": "The Bronze Layer stores raw data exactly as received, not joined and standardized tables with invalid records removed. The described cleaning step defines the Silver Layer."
+          "text": "Silver Layer (Cleaned Zone)",
+          "correct": true,
+          "rationale": "Correct. The Silver Layer holds cleaned, joined, and standardized data with invalid records removed, such as a standardized student-course-attendance table, and is used by Data Scientists."
         },
         {
           "label": "B",
@@ -980,9 +980,9 @@
         },
         {
           "label": "C",
-          "text": "Silver Layer (Cleaned Zone)",
-          "correct": true,
-          "rationale": "Correct. The Silver Layer holds cleaned, joined, and standardized data with invalid records removed, such as a standardized student-course-attendance table, and is used by Data Scientists."
+          "text": "Bronze Layer (Raw Zone)",
+          "correct": false,
+          "rationale": "The Bronze Layer stores raw data exactly as received, not joined and standardized tables with invalid records removed. The described cleaning step defines the Silver Layer."
         },
         {
           "label": "D",
@@ -1001,27 +1001,27 @@
       "options": [
         {
           "label": "A",
-          "text": "They stay online and return the most recent local data, accepting eventual consistency",
-          "correct": true,
-          "rationale": "Correct. AP-edge systems prioritize availability: during a partition they remain online and serve the most recent local data, accepting eventual consistency."
-        },
-        {
-          "label": "B",
-          "text": "They block all reads and writes until every node re-synchronizes",
-          "correct": false,
-          "rationale": "Wrong. Blocking access until nodes re-sync is CP behavior favoring consistency. AP systems instead keep serving local data to stay available."
-        },
-        {
-          "label": "C",
           "text": "They guarantee every node returns identical data at the instant of the partition",
           "correct": false,
           "rationale": "Wrong. Guaranteeing identical data at every instant is strong consistency (CP/CA). AP systems accept temporary divergence and reconcile via eventual consistency."
         },
         {
-          "label": "D",
+          "label": "B",
           "text": "They require a single master to acknowledge each write before responding",
           "correct": false,
           "rationale": "Wrong. A single-master acknowledgment pattern leans toward consistency, not availability under partition. AP systems serve local data without that coordination."
+        },
+        {
+          "label": "C",
+          "text": "They block all reads and writes until every node re-synchronizes",
+          "correct": false,
+          "rationale": "Wrong. Blocking access until nodes re-sync is CP behavior favoring consistency. AP systems instead keep serving local data to stay available."
+        },
+        {
+          "label": "D",
+          "text": "They stay online and return the most recent local data, accepting eventual consistency",
+          "correct": true,
+          "rationale": "Correct. AP-edge systems prioritize availability: during a partition they remain online and serve the most recent local data, accepting eventual consistency."
         }
       ]
     },
@@ -1034,27 +1034,27 @@
       "options": [
         {
           "label": "A",
-          "text": "The Partitioner",
-          "correct": false,
-          "rationale": "The partitioner decides which reduce task a given (K,V) pair goes to, after mapping. Converting a split's raw data into (K,V) pairs for the Mapper is the Record Reader's job."
-        },
-        {
-          "label": "B",
-          "text": "The Output Format",
-          "correct": false,
-          "rationale": "Output Format defines how reducers' (K,V) pairs are written to output files, which is the end of the pipeline. Reading a split into (K,V) pairs for the Mapper is done by the Record Reader."
-        },
-        {
-          "label": "C",
           "text": "The Record Reader",
           "correct": true,
           "rationale": "The Record Reader loads data from an input split and converts it into key-value pairs that are then fed to the Mapper."
         },
         {
-          "label": "D",
+          "label": "B",
           "text": "The Reducer",
           "correct": false,
           "rationale": "The Reducer aggregates the sorted intermediate keys after the map phase, well after data has been read. Turning a split into (K,V) pairs for the Mapper is the Record Reader's responsibility."
+        },
+        {
+          "label": "C",
+          "text": "The Partitioner",
+          "correct": false,
+          "rationale": "The partitioner decides which reduce task a given (K,V) pair goes to, after mapping. Converting a split's raw data into (K,V) pairs for the Mapper is the Record Reader's job."
+        },
+        {
+          "label": "D",
+          "text": "The Output Format",
+          "correct": false,
+          "rationale": "Output Format defines how reducers' (K,V) pairs are written to output files, which is the end of the pipeline. Reading a split into (K,V) pairs for the Mapper is done by the Record Reader."
         }
       ]
     },
@@ -1067,9 +1067,9 @@
       "options": [
         {
           "label": "A",
-          "text": "Files First, storing big data initially as files in scalable cloud buckets rather than rigid tables",
-          "correct": false,
-          "rationale": "This is a genuine pillar and not the exception: Files First captures storing data initially as files in scalable cloud buckets instead of rigid tables."
+          "text": "Schema-on-Write Enforcement, requiring every record to match a fixed schema before storage",
+          "correct": true,
+          "rationale": "This is the exception because it is not a pillar. The pillars favor a files-first, schema-on-read model; schema-on-write enforcement describes the rigid traditional database approach, not modern lake storage."
         },
         {
           "label": "B",
@@ -1079,9 +1079,9 @@
         },
         {
           "label": "C",
-          "text": "Schema-on-Write Enforcement, requiring every record to match a fixed schema before storage",
-          "correct": true,
-          "rationale": "This is the exception because it is not a pillar. The pillars favor a files-first, schema-on-read model; schema-on-write enforcement describes the rigid traditional database approach, not modern lake storage."
+          "text": "Files First, storing big data initially as files in scalable cloud buckets rather than rigid tables",
+          "correct": false,
+          "rationale": "This is a genuine pillar and not the exception: Files First captures storing data initially as files in scalable cloud buckets instead of rigid tables."
         },
         {
           "label": "D",
@@ -1100,21 +1100,21 @@
       "options": [
         {
           "label": "A",
-          "text": "YARN",
-          "correct": false,
-          "rationale": "YARN provides resource management for the cluster, not data storage. The distributed storage layer is HDFS."
-        },
-        {
-          "label": "B",
           "text": "MapReduce",
           "correct": false,
           "rationale": "MapReduce is the computing engine and programming model for processing data, not the storage layer. Distributed storage is provided by HDFS."
         },
         {
-          "label": "C",
+          "label": "B",
           "text": "HDFS",
           "correct": true,
           "rationale": "HDFS (Hadoop Distributed File System) is the distributed filesystem responsible for storing data across the cluster."
+        },
+        {
+          "label": "C",
+          "text": "YARN",
+          "correct": false,
+          "rationale": "YARN provides resource management for the cluster, not data storage. The distributed storage layer is HDFS."
         },
         {
           "label": "D",
@@ -1133,27 +1133,27 @@
       "options": [
         {
           "label": "A",
-          "text": "Local variables are stored across cluster nodes, while RDDs live only in the driver's memory",
-          "correct": false,
-          "rationale": "This reverses the truth. Local variables reside in the driver's process memory, while RDDs are distributed across cluster nodes."
-        },
-        {
-          "label": "B",
           "text": "Both local variables and RDDs are allocated in the driver's process memory",
           "correct": false,
           "rationale": "Only local variables live in the driver's memory; RDDs are distributed 'variables' stored across the cluster's executors, not in the driver."
         },
         {
-          "label": "C",
-          "text": "Local variables are allocated in the driver's process memory, while RDDs are distributed across cluster nodes",
-          "correct": true,
-          "rationale": "Local variables are standard program variables held in the driver's process memory, whereas RDDs are distributed 'variables' whose partitions are stored across the nodes of the cluster."
+          "label": "B",
+          "text": "Local variables are stored across cluster nodes, while RDDs live only in the driver's memory",
+          "correct": false,
+          "rationale": "This reverses the truth. Local variables reside in the driver's process memory, while RDDs are distributed across cluster nodes."
         },
         {
-          "label": "D",
+          "label": "C",
           "text": "Both local variables and RDDs are split into partitions across executors",
           "correct": false,
           "rationale": "Only RDDs are partitioned across executors; ordinary local variables remain in the driver's process memory."
+        },
+        {
+          "label": "D",
+          "text": "Local variables are allocated in the driver's process memory, while RDDs are distributed across cluster nodes",
+          "correct": true,
+          "rationale": "Local variables are standard program variables held in the driver's process memory, whereas RDDs are distributed 'variables' whose partitions are stored across the nodes of the cluster."
         }
       ]
     },
@@ -1172,21 +1172,21 @@
         },
         {
           "label": "B",
-          "text": "A document store understands the document's internal structure, enabling deep querying of its fields",
-          "correct": true,
-          "rationale": "Correct. Unlike a key-value store, a document store understands the internal structure of documents (JSON, BSON, XML), allowing deep querying of nested fields."
-        },
-        {
-          "label": "C",
           "text": "A document store can only retrieve data by primary key, never by field",
           "correct": false,
           "rationale": "Wrong. Retrieving only by key is the key-value limitation. Document stores can query by fields inside the document because they understand its structure."
         },
         {
-          "label": "D",
+          "label": "C",
           "text": "A document store forbids nested or embedded data within a record",
           "correct": false,
           "rationale": "Wrong. Document stores explicitly allow lists, nested/embedded data, and missing fields. Forbidding nesting contradicts their core flexibility."
+        },
+        {
+          "label": "D",
+          "text": "A document store understands the document's internal structure, enabling deep querying of its fields",
+          "correct": true,
+          "rationale": "Correct. Unlike a key-value store, a document store understands the internal structure of documents (JSON, BSON, XML), allowing deep querying of nested fields."
         }
       ]
     },
@@ -1199,27 +1199,27 @@
       "options": [
         {
           "label": "A",
-          "text": "It guarantees that all stored data is automatically cleaned and validated",
-          "correct": false,
-          "rationale": "Deferring schema definition does not clean or validate data; raw data lands as-is. Cleaning happens later in refinement zones, so this overstates what schema-on-read provides; the real benefit is immediate file storage."
-        },
-        {
-          "label": "B",
-          "text": "It enforces referential integrity across all stored files",
-          "correct": false,
-          "rationale": "Referential integrity enforcement is a feature of structured relational databases, not file-first lakes. The lake's real advantage is the flexibility of immediate storage without a predefined structure."
-        },
-        {
-          "label": "C",
           "text": "It allows files to be stored immediately without first defining a rigid structure",
           "correct": true,
           "rationale": "Correct. A data lake stores files first and creates tables later, so data can be ingested immediately without the up-front rigid structure that schema-on-write demands."
         },
         {
-          "label": "D",
+          "label": "B",
           "text": "It eliminates the need for any storage infrastructure",
           "correct": false,
           "rationale": "A data lake still relies on scalable object storage for files; it does not remove storage needs. Its real advantage is storing files first without predefining structure."
+        },
+        {
+          "label": "C",
+          "text": "It guarantees that all stored data is automatically cleaned and validated",
+          "correct": false,
+          "rationale": "Deferring schema definition does not clean or validate data; raw data lands as-is. Cleaning happens later in refinement zones, so this overstates what schema-on-read provides; the real benefit is immediate file storage."
+        },
+        {
+          "label": "D",
+          "text": "It enforces referential integrity across all stored files",
+          "correct": false,
+          "rationale": "Referential integrity enforcement is a feature of structured relational databases, not file-first lakes. The lake's real advantage is the flexibility of immediate storage without a predefined structure."
         }
       ]
     },
@@ -1232,27 +1232,27 @@
       "options": [
         {
           "label": "A",
-          "text": "Semi-structured, structured, unstructured",
-          "correct": false,
-          "rationale": "This misclassifies MySQL tables as semi-structured; relational tables with a fixed schema are structured, while JSON/XML are the semi-structured items. The correct order is structured, semi-structured, unstructured."
-        },
-        {
-          "label": "B",
-          "text": "Structured, semi-structured, unstructured",
-          "correct": true,
-          "rationale": "MySQL tables are structured (fixed schema, relational), JSON/XML are semi-structured (some organization but not tabular), and video clips are unstructured (no predefined structure)."
-        },
-        {
-          "label": "C",
           "text": "Structured, unstructured, semi-structured",
           "correct": false,
           "rationale": "This wrongly labels JSON/XML as unstructured and video as semi-structured; JSON/XML are semi-structured and video has no predefined structure, making it unstructured."
         },
         {
-          "label": "D",
+          "label": "B",
           "text": "Unstructured, semi-structured, structured",
           "correct": false,
           "rationale": "This reverses the categories entirely; MySQL tables are structured (not unstructured) and video clips are unstructured (not structured)."
+        },
+        {
+          "label": "C",
+          "text": "Structured, semi-structured, unstructured",
+          "correct": true,
+          "rationale": "MySQL tables are structured (fixed schema, relational), JSON/XML are semi-structured (some organization but not tabular), and video clips are unstructured (no predefined structure)."
+        },
+        {
+          "label": "D",
+          "text": "Semi-structured, structured, unstructured",
+          "correct": false,
+          "rationale": "This misclassifies MySQL tables as semi-structured; relational tables with a fixed schema are structured, while JSON/XML are the semi-structured items. The correct order is structured, semi-structured, unstructured."
         }
       ]
     },
@@ -1265,27 +1265,27 @@
       "options": [
         {
           "label": "A",
-          "text": "Google Research",
-          "correct": false,
-          "rationale": "Google is associated with the original MapReduce and GFS papers, not Spark. Spark originated at UC Berkeley's AMPLab."
-        },
-        {
-          "label": "B",
           "text": "UC Berkeley's AMPLab",
           "correct": true,
           "rationale": "Spark was originally developed at the AMPLab at the University of California, Berkeley."
         },
         {
-          "label": "C",
-          "text": "The Apache Software Foundation from inception",
+          "label": "B",
+          "text": "Google Research",
           "correct": false,
-          "rationale": "Although Spark is now an Apache project, it did not originate at the Apache Software Foundation. It was first developed at UC Berkeley's AMPLab before later being donated to Apache."
+          "rationale": "Google is associated with the original MapReduce and GFS papers, not Spark. Spark originated at UC Berkeley's AMPLab."
         },
         {
-          "label": "D",
+          "label": "C",
           "text": "Yahoo's Hadoop engineering team",
           "correct": false,
           "rationale": "Yahoo is closely tied to early Hadoop development, not Spark. Spark's origin is UC Berkeley's AMPLab."
+        },
+        {
+          "label": "D",
+          "text": "The Apache Software Foundation from inception",
+          "correct": false,
+          "rationale": "Although Spark is now an Apache project, it did not originate at the Apache Software Foundation. It was first developed at UC Berkeley's AMPLab before later being donated to Apache."
         }
       ]
     },
@@ -1298,15 +1298,15 @@
       "options": [
         {
           "label": "A",
-          "text": "Fixed-width relational rows",
-          "correct": false,
-          "rationale": "MapReduce does not require relational rows; it processes arbitrary input. Throughout the model, data is represented as key-value pairs, not fixed-width rows."
-        },
-        {
-          "label": "B",
           "text": "Key-value (K,V) pairs",
           "correct": true,
           "rationale": "MapReduce represents data as key-value pairs throughout: Map emits (K,V), intermediate outputs are (K',V'), and Reduce emits (K'',V'')."
+        },
+        {
+          "label": "B",
+          "text": "Fixed-width relational rows",
+          "correct": false,
+          "rationale": "MapReduce does not require relational rows; it processes arbitrary input. Throughout the model, data is represented as key-value pairs, not fixed-width rows."
         },
         {
           "label": "C",
@@ -1343,15 +1343,15 @@
         },
         {
           "label": "C",
-          "text": "Batch ingestion using Apache Kafka",
-          "correct": false,
-          "rationale": "Kafka is associated with real-time, not batch; and batch's scheduled intervals would be too slow for instant fraud flagging, which requires real-time ingestion."
-        },
-        {
-          "label": "D",
           "text": "Real-time ingestion using Apache NiFi",
           "correct": false,
           "rationale": "NiFi is the example tool for batch ingestion; the correct real-time pairing for immediate fraud detection is real-time ingestion with Apache Kafka."
+        },
+        {
+          "label": "D",
+          "text": "Batch ingestion using Apache Kafka",
+          "correct": false,
+          "rationale": "Kafka is associated with real-time, not batch; and batch's scheduled intervals would be too slow for instant fraud flagging, which requires real-time ingestion."
         }
       ]
     },
@@ -1370,21 +1370,21 @@
         },
         {
           "label": "B",
+          "text": "Horizontal scaling, because more capacity is added",
+          "correct": false,
+          "rationale": "Horizontal scaling is synonymous with scale-out (adding nodes), the opposite of what was done. Upgrading a single machine to be faster is vertical scaling, i.e., scale-up."
+        },
+        {
+          "label": "C",
           "text": "Chunking, because the data is being split",
           "correct": false,
           "rationale": "Chunking is a storage-optimization technique for breaking data into pieces, not a hardware scaling strategy. No data was split here; the team upgraded one machine, which is scale-up."
         },
         {
-          "label": "C",
+          "label": "D",
           "text": "Scale-up, because equipment is replaced with faster, more efficient hardware",
           "correct": true,
           "rationale": "Scale-up (vertical scaling) is precisely replacing equipment with faster or more efficient hardware on a single machine, which is what the team did."
-        },
-        {
-          "label": "D",
-          "text": "Horizontal scaling, because more capacity is added",
-          "correct": false,
-          "rationale": "Horizontal scaling is synonymous with scale-out (adding nodes), the opposite of what was done. Upgrading a single machine to be faster is vertical scaling, i.e., scale-up."
         }
       ]
     },
@@ -1397,21 +1397,21 @@
       "options": [
         {
           "label": "A",
-          "text": "Isolated environments where analysts perform discovery, exploratory data analysis, machine learning, and predictive modeling",
-          "correct": true,
-          "rationale": "Analytical sandboxes are isolated environments for discovery, ML, predictive modeling, and exploratory data analysis, matching this description exactly."
-        },
-        {
-          "label": "B",
           "text": "Distributed file systems that store raw data redundantly across many nodes for fault tolerance",
           "correct": false,
           "rationale": "That describes storage systems like HDFS or S3 in the storage layer, not sandboxes; sandboxes are isolated environments for analysis and experimentation."
         },
         {
-          "label": "C",
+          "label": "B",
           "text": "Tools that import data immediately as it is generated for real-time analytics",
           "correct": false,
           "rationale": "That describes real-time ingestion; sandboxes are not ingestion tools but isolated environments for discovery and modeling."
+        },
+        {
+          "label": "C",
+          "text": "Isolated environments where analysts perform discovery, exploratory data analysis, machine learning, and predictive modeling",
+          "correct": true,
+          "rationale": "Analytical sandboxes are isolated environments for discovery, ML, predictive modeling, and exploratory data analysis, matching this description exactly."
         },
         {
           "label": "D",
@@ -1469,15 +1469,15 @@
         },
         {
           "label": "B",
-          "text": "Because RDDs are stored only on disk and disk data is read-only",
-          "correct": false,
-          "rationale": "RDDs are stored in memory when possible (and on disk only as a fallback), and the real reason editing fails is immutability, not a read-only disk."
-        },
-        {
-          "label": "C",
           "text": "Because only the cluster manager, not the driver, is allowed to write to RDDs",
           "correct": false,
           "rationale": "The restriction is not about who may write; RDDs are immutable by design and cannot be modified by anyone after construction."
+        },
+        {
+          "label": "C",
+          "text": "Because RDDs are stored only on disk and disk data is read-only",
+          "correct": false,
+          "rationale": "RDDs are stored in memory when possible (and on disk only as a fallback), and the real reason editing fails is immutability, not a read-only disk."
         },
         {
           "label": "D",
@@ -1496,27 +1496,27 @@
       "options": [
         {
           "label": "A",
-          "text": "It restores the partition from a synchronous three-way disk replica maintained for every RDD",
-          "correct": false,
-          "rationale": "Spark does not depend on a mandatory three-way replica of every RDD; it instead recomputes lost data using lineage information that records how the RDD was constructed."
-        },
-        {
-          "label": "B",
           "text": "It uses the recorded lineage to recompute the lost partition from its inputs",
           "correct": true,
           "rationale": "Because Spark tracks lineage (how each RDD was constructed, as a DAG), it can efficiently recompute exactly the lost partition from its input data after an executor failure."
         },
         {
-          "label": "C",
-          "text": "It aborts and restarts the entire job from the beginning on a new cluster",
+          "label": "B",
+          "text": "It restores the partition from a synchronous three-way disk replica maintained for every RDD",
           "correct": false,
-          "rationale": "A full restart is unnecessary and inefficient. Lineage lets Spark recompute only the lost data rather than re-running everything."
+          "rationale": "Spark does not depend on a mandatory three-way replica of every RDD; it instead recomputes lost data using lineage information that records how the RDD was constructed."
         },
         {
-          "label": "D",
+          "label": "C",
           "text": "It modifies the surviving RDD in place to fill in the missing values",
           "correct": false,
           "rationale": "RDDs are immutable and cannot be modified in place. Recovery works by recomputing the lost partition from lineage, not by editing existing data."
+        },
+        {
+          "label": "D",
+          "text": "It aborts and restarts the entire job from the beginning on a new cluster",
+          "correct": false,
+          "rationale": "A full restart is unnecessary and inefficient. Lineage lets Spark recompute only the lost data rather than re-running everything."
         }
       ]
     },
@@ -1529,9 +1529,9 @@
       "options": [
         {
           "label": "A",
-          "text": "A job is divided into smaller sets of tasks called stages, where the output of one stage is the input of the next",
+          "text": "A stage with no output edges stores its output in HDFS or a database",
           "correct": false,
-          "rationale": "This is true: each job is divided into stages, and one stage's output feeds the next, so it is not the exception."
+          "rationale": "This is true: stages without output edges write their results to HDFS or a database, so it is not the exception."
         },
         {
           "label": "B",
@@ -1541,15 +1541,15 @@
         },
         {
           "label": "C",
-          "text": "The shuffle is a lightweight operation with negligible cost",
-          "correct": true,
-          "rationale": "This is the false statement and therefore the exception: the shuffle is described as a heavy operation, not a lightweight one with negligible cost."
+          "text": "A job is divided into smaller sets of tasks called stages, where the output of one stage is the input of the next",
+          "correct": false,
+          "rationale": "This is true: each job is divided into stages, and one stage's output feeds the next, so it is not the exception."
         },
         {
           "label": "D",
-          "text": "A stage with no output edges stores its output in HDFS or a database",
-          "correct": false,
-          "rationale": "This is true: stages without output edges write their results to HDFS or a database, so it is not the exception."
+          "text": "The shuffle is a lightweight operation with negligible cost",
+          "correct": true,
+          "rationale": "This is the false statement and therefore the exception: the shuffle is described as a heavy operation, not a lightweight one with negligible cost."
         }
       ]
     },
@@ -1562,27 +1562,27 @@
       "options": [
         {
           "label": "A",
-          "text": "JSON",
-          "correct": false,
-          "rationale": "JSON is semi-structured text good for web logs and nested APIs but produces massive file sizes and very slow analytical queries, unlike Parquet which is built for heavy analytics on Spark and Athena."
-        },
-        {
-          "label": "B",
-          "text": "Parquet",
-          "correct": true,
-          "rationale": "Correct. Parquet is a columnar binary format ideal for heavy analytics with Spark and Amazon Athena; its trade-off is not being directly human-readable without processing."
-        },
-        {
-          "label": "C",
           "text": "CSV",
           "correct": false,
           "rationale": "CSV is row-based text with no schema and is highly inefficient for big-data workloads, the opposite of a format purpose-built for analytics like Parquet."
         },
         {
-          "label": "D",
+          "label": "B",
           "text": "Avro",
           "correct": false,
           "rationale": "Avro is row-based binary suited to streaming and schema evolution, and is less ideal for deep analytical column queries, whereas Parquet is built precisely for those analytics."
+        },
+        {
+          "label": "C",
+          "text": "JSON",
+          "correct": false,
+          "rationale": "JSON is semi-structured text good for web logs and nested APIs but produces massive file sizes and very slow analytical queries, unlike Parquet which is built for heavy analytics on Spark and Athena."
+        },
+        {
+          "label": "D",
+          "text": "Parquet",
+          "correct": true,
+          "rationale": "Correct. Parquet is a columnar binary format ideal for heavy analytics with Spark and Amazon Athena; its trade-off is not being directly human-readable without processing."
         }
       ]
     },
@@ -1595,27 +1595,27 @@
       "options": [
         {
           "label": "A",
-          "text": "Local threads act as 'pseudo-worker' nodes, parallelizing execution on the single PC",
-          "correct": true,
-          "rationale": "In local mode, local threads parallelize execution on a single PC and act as 'pseudo-worker' nodes, with a local scheduler running over the local file system, which is useful for development and testing."
+          "text": "HDFS DataNodes running on the laptop emulate the cluster",
+          "correct": false,
+          "rationale": "Local mode runs over the local file system, not HDFS DataNodes. Local threads act as the pseudo-worker nodes."
         },
         {
           "label": "B",
-          "text": "Remote executors on a YARN cluster are still required",
-          "correct": false,
-          "rationale": "Local mode does not require a remote cluster. Local threads serve as pseudo-worker nodes on the single machine."
-        },
-        {
-          "label": "C",
           "text": "The driver program itself becomes unnecessary and is not started",
           "correct": false,
           "rationale": "The program still has a driver with a main method even in local mode. What stands in for worker nodes are local threads acting as pseudo-workers."
         },
         {
+          "label": "C",
+          "text": "Local threads act as 'pseudo-worker' nodes, parallelizing execution on the single PC",
+          "correct": true,
+          "rationale": "In local mode, local threads parallelize execution on a single PC and act as 'pseudo-worker' nodes, with a local scheduler running over the local file system, which is useful for development and testing."
+        },
+        {
           "label": "D",
-          "text": "HDFS DataNodes running on the laptop emulate the cluster",
+          "text": "Remote executors on a YARN cluster are still required",
           "correct": false,
-          "rationale": "Local mode runs over the local file system, not HDFS DataNodes. Local threads act as the pseudo-worker nodes."
+          "rationale": "Local mode does not require a remote cluster. Local threads serve as pseudo-worker nodes on the single machine."
         }
       ]
     },
@@ -1634,21 +1634,21 @@
         },
         {
           "label": "B",
+          "text": "ORC is most commonly associated with analytics in the Hadoop and Hive ecosystem",
+          "correct": false,
+          "rationale": "This is true and not the exception: ORC is good for Hadoop/Hive ecosystem analytics and is less common outside of it."
+        },
+        {
+          "label": "C",
           "text": "Parquet and ORC are compressed, schema-aware, and purpose-built for massive parallel processing",
           "correct": false,
           "rationale": "This is true and not the exception: Parquet and ORC are columnar binary formats that are compressed, schema-aware, and built for massive parallel analytics."
         },
         {
-          "label": "C",
+          "label": "D",
           "text": "Avro is a columnar format optimized for deep analytical column queries",
           "correct": true,
           "rationale": "This is the exception because it is false: Avro is a row-based binary format suited to streaming and schema evolution, and it is explicitly less ideal for deep analytical column queries. The truly columnar analytical formats are Parquet and ORC."
-        },
-        {
-          "label": "D",
-          "text": "ORC is most commonly associated with analytics in the Hadoop and Hive ecosystem",
-          "correct": false,
-          "rationale": "This is true and not the exception: ORC is good for Hadoop/Hive ecosystem analytics and is less common outside of it."
         }
       ]
     },
@@ -1667,21 +1667,21 @@
         },
         {
           "label": "B",
-          "text": "Both store data exclusively in memory",
-          "correct": false,
-          "rationale": "MapReduce is disk-only, so this is incorrect. Only Spark offers in-memory storage (with disk as a fallback)."
-        },
-        {
-          "label": "C",
           "text": "Hadoop MapReduce stores data in memory, whereas Spark uses disk only",
           "correct": false,
           "rationale": "This reverses the truth. MapReduce is disk-only and Spark is the one that adds the in-memory option."
         },
         {
-          "label": "D",
+          "label": "C",
           "text": "Neither system writes data to disk under any circumstances",
           "correct": false,
           "rationale": "MapReduce is fundamentally disk-based and even Spark spills to disk when memory is insufficient, so both can use disk. The correct contrast is disk-only versus in-memory-or-disk."
+        },
+        {
+          "label": "D",
+          "text": "Both store data exclusively in memory",
+          "correct": false,
+          "rationale": "MapReduce is disk-only, so this is incorrect. Only Spark offers in-memory storage (with disk as a fallback)."
         }
       ]
     },
@@ -1700,15 +1700,15 @@
         },
         {
           "label": "B",
-          "text": "Spark, because it supports batch, interactive, and streaming execution and offers Scala, Java, Python, and R",
-          "correct": true,
-          "rationale": "Spark's execution model spans batch, interactive, and streaming, and it provides programming environments in Scala, Java, Python, and R, exactly matching the requirements."
-        },
-        {
-          "label": "C",
           "text": "Hadoop MapReduce, because it offers Scala, Java, Python, and R while Spark is Java-only",
           "correct": false,
           "rationale": "This reverses the language support. MapReduce's primary environment is Java, while Spark is the one offering Scala, Java, Python, and R."
+        },
+        {
+          "label": "C",
+          "text": "Spark, because it supports batch, interactive, and streaming execution and offers Scala, Java, Python, and R",
+          "correct": true,
+          "rationale": "Spark's execution model spans batch, interactive, and streaming, and it provides programming environments in Scala, Java, Python, and R, exactly matching the requirements."
         },
         {
           "label": "D",
@@ -1727,27 +1727,27 @@
       "options": [
         {
           "label": "A",
-          "text": "The governance, security, and monitoring layer",
-          "correct": true,
-          "rationale": "Governance enforces rules and policies for data access, quality, and usability, with Apache Atlas as the example, and this layer is overarching across the architecture."
-        },
-        {
-          "label": "B",
-          "text": "The data ingestion layer",
-          "correct": false,
-          "rationale": "Ingestion imports and loads data; enforcing access, quality, and usability policies is the role of the governance, security, and monitoring layer."
-        },
-        {
-          "label": "C",
           "text": "The storage and processing layer",
           "correct": false,
           "rationale": "Storage and processing holds and transforms data; policy enforcement for access and usability belongs to governance, security, and monitoring."
         },
         {
-          "label": "D",
+          "label": "B",
           "text": "The analytics and servicing layer",
           "correct": false,
           "rationale": "Analytics and servicing delivers insights and reporting; enforcing data policies and protection is the governance, security, and monitoring layer."
+        },
+        {
+          "label": "C",
+          "text": "The governance, security, and monitoring layer",
+          "correct": true,
+          "rationale": "Governance enforces rules and policies for data access, quality, and usability, with Apache Atlas as the example, and this layer is overarching across the architecture."
+        },
+        {
+          "label": "D",
+          "text": "The data ingestion layer",
+          "correct": false,
+          "rationale": "Ingestion imports and loads data; enforcing access, quality, and usability policies is the role of the governance, security, and monitoring layer."
         }
       ]
     },
@@ -1766,21 +1766,21 @@
         },
         {
           "label": "B",
+          "text": "Agility from flexible schema design allowing changes without downtime",
+          "correct": false,
+          "rationale": "This IS a stated pro: NoSQL's flexible schema (agility) allows alteration without downtime, so it is not the exception."
+        },
+        {
+          "label": "C",
           "text": "High availability via easy replication with no single point of failure",
           "correct": false,
           "rationale": "This IS a stated pro: NoSQL offers high availability through easy replication and no single point of failure, so it is not the exception."
         },
         {
-          "label": "C",
+          "label": "D",
           "text": "A single standardized query language and API shared across all NoSQL databases",
           "correct": true,
           "rationale": "This is the EXCEPTION. NoSQL's listed CONS include the lack of standardization, where each database has its own API and learning curve. A single shared standard API is not a NoSQL advantage."
-        },
-        {
-          "label": "D",
-          "text": "Agility from flexible schema design allowing changes without downtime",
-          "correct": false,
-          "rationale": "This IS a stated pro: NoSQL's flexible schema (agility) allows alteration without downtime, so it is not the exception."
         }
       ]
     },
@@ -1793,9 +1793,9 @@
       "options": [
         {
           "label": "A",
-          "text": "They organize data by columns, grouping related columns into column families",
+          "text": "They deliver extreme performance on aggregation queries over a single column",
           "correct": false,
-          "rationale": "This is TRUE of column-family stores: they organize data by columns and group related columns into column families, so it is not the exception."
+          "rationale": "This is TRUE: storing a column's values contiguously gives extreme performance on aggregations like SUM, COUNT, and AVG, so it is not the exception."
         },
         {
           "label": "B",
@@ -1805,15 +1805,15 @@
         },
         {
           "label": "C",
-          "text": "They deliver extreme performance on aggregation queries over a single column",
-          "correct": false,
-          "rationale": "This is TRUE: storing a column's values contiguously gives extreme performance on aggregations like SUM, COUNT, and AVG, so it is not the exception."
-        },
-        {
-          "label": "D",
           "text": "They excel at frequent updates to individual records and heavy transactional workloads",
           "correct": true,
           "rationale": "This is the EXCEPTION (the false statement). Column-family stores are poor at updating individual records and weak for heavy transactional workloads; their strength is columnar aggregation, not transactional updates."
+        },
+        {
+          "label": "D",
+          "text": "They organize data by columns, grouping related columns into column families",
+          "correct": false,
+          "rationale": "This is TRUE of column-family stores: they organize data by columns and group related columns into column families, so it is not the exception."
         }
       ]
     },
@@ -1826,27 +1826,27 @@
       "options": [
         {
           "label": "A",
-          "text": "Schema-on-write validates structure when data is stored; schema-on-read interprets structure when data is retrieved",
-          "correct": true,
-          "rationale": "Correct. Schema-on-write enforces a predefined structure at insert time (rigid), while schema-on-read lets structure be interpreted at query/read time, allowing flexible, heterogeneous records."
-        },
-        {
-          "label": "B",
           "text": "Schema-on-write means data is never validated; schema-on-read means it is validated twice",
           "correct": false,
           "rationale": "Wrong. Schema-on-write enforces validation at write time, not never. The real distinction is when structure is applied: at write versus at read."
         },
         {
-          "label": "C",
-          "text": "Schema-on-read requires a rigid predefined schema before any insert",
-          "correct": false,
-          "rationale": "Wrong. Requiring a rigid predefined schema before insert is schema-on-write (relational). Schema-on-read applies/interprets structure at read time, enabling flexibility."
-        },
-        {
-          "label": "D",
+          "label": "B",
           "text": "Both approaches require altering all existing rows whenever a field is added",
           "correct": false,
           "rationale": "Wrong. Forcing changes across all existing rows is the rigid relational (schema-on-write) pain point. Schema-on-read tolerates new or missing fields without rewriting existing records."
+        },
+        {
+          "label": "C",
+          "text": "Schema-on-write validates structure when data is stored; schema-on-read interprets structure when data is retrieved",
+          "correct": true,
+          "rationale": "Correct. Schema-on-write enforces a predefined structure at insert time (rigid), while schema-on-read lets structure be interpreted at query/read time, allowing flexible, heterogeneous records."
+        },
+        {
+          "label": "D",
+          "text": "Schema-on-read requires a rigid predefined schema before any insert",
+          "correct": false,
+          "rationale": "Wrong. Requiring a rigid predefined schema before insert is schema-on-write (relational). Schema-on-read applies/interprets structure at read time, enabling flexibility."
         }
       ]
     },
@@ -1859,27 +1859,27 @@
       "options": [
         {
           "label": "A",
-          "text": "Big data, which refers to data sets so large, fast, and complex that they cannot be processed with traditional data-processing systems",
-          "correct": true,
-          "rationale": "This matches the core definition: big data is collections of data sets so large, fast, and complex they exceed the capabilities of traditional databases and require powerful technologies and advanced algorithms."
-        },
-        {
-          "label": "B",
-          "text": "A data warehouse, which is a centralized relational store optimized for structured reporting",
-          "correct": false,
-          "rationale": "A data warehouse is a traditional structured, centralized system; the scenario explicitly exceeds what such conventional systems can handle, which is the hallmark of big data rather than a warehouse."
-        },
-        {
-          "label": "C",
           "text": "A data mart, which is a small subject-specific subset of an enterprise database",
           "correct": false,
           "rationale": "A data mart is a small, focused slice of structured enterprise data; the scenario describes overwhelming volume, velocity, and variety that exceed traditional systems, which defines big data, not a small subset."
         },
         {
-          "label": "D",
+          "label": "B",
           "text": "Metadata, which is descriptive information about other data",
           "correct": false,
           "rationale": "Metadata describes other data; it is not a category of overwhelming data sets. The scenario describes data exceeding traditional processing limits, which is the definition of big data."
+        },
+        {
+          "label": "C",
+          "text": "A data warehouse, which is a centralized relational store optimized for structured reporting",
+          "correct": false,
+          "rationale": "A data warehouse is a traditional structured, centralized system; the scenario explicitly exceeds what such conventional systems can handle, which is the hallmark of big data rather than a warehouse."
+        },
+        {
+          "label": "D",
+          "text": "Big data, which refers to data sets so large, fast, and complex that they cannot be processed with traditional data-processing systems",
+          "correct": true,
+          "rationale": "This matches the core definition: big data is collections of data sets so large, fast, and complex they exceed the capabilities of traditional databases and require powerful technologies and advanced algorithms."
         }
       ]
     },
@@ -1892,21 +1892,21 @@
       "options": [
         {
           "label": "A",
+          "text": "Large, because it cannot fit in RAM",
+          "correct": false,
+          "rationale": "A large dataset fits neither in RAM nor on a single computer's disk. Since this dataset still fits on local disk, it is medium, not large; not fitting in RAM alone does not make it large."
+        },
+        {
+          "label": "B",
           "text": "Small, because it can be handled by a single computer",
           "correct": false,
           "rationale": "A small dataset is defined as one that fits comfortably in RAM (roughly 2-4 GB) so complex operations run without paging. The described dataset exceeds RAM, so it is not small; the correct category is medium."
         },
         {
-          "label": "B",
+          "label": "C",
           "text": "Medium, because it exceeds RAM but fits on a single computer's persistent storage",
           "correct": true,
           "rationale": "By definition, a medium dataset cannot fit in RAM but does fit within a single computer's persistent (disk) storage, which exactly matches the scenario."
-        },
-        {
-          "label": "C",
-          "text": "Large, because it cannot fit in RAM",
-          "correct": false,
-          "rationale": "A large dataset fits neither in RAM nor on a single computer's disk. Since this dataset still fits on local disk, it is medium, not large; not fitting in RAM alone does not make it large."
         },
         {
           "label": "D",
@@ -1958,9 +1958,9 @@
       "options": [
         {
           "label": "A",
-          "text": "By a shutdown message the DataNode sends before crashing",
+          "text": "By the client reporting that its read failed",
           "correct": false,
-          "rationale": "A crashed or partitioned node cannot reliably send a graceful shutdown message; detection relies instead on the missing heartbeat that the NameNode notices."
+          "rationale": "The NameNode does not depend on client failure reports to detect dead nodes; it monitors heartbeats and notices their absence to flag a DataNode as unavailable."
         },
         {
           "label": "B",
@@ -1970,15 +1970,15 @@
         },
         {
           "label": "C",
-          "text": "By the client reporting that its read failed",
-          "correct": false,
-          "rationale": "The NameNode does not depend on client failure reports to detect dead nodes; it monitors heartbeats and notices their absence to flag a DataNode as unavailable."
-        },
-        {
-          "label": "D",
           "text": "By a TaskTracker informing the JobTracker",
           "correct": false,
           "rationale": "TaskTracker/JobTracker communication concerns MapReduce task scheduling, not HDFS node liveness. The NameNode detects a dead DataNode via the absence of a heartbeat."
+        },
+        {
+          "label": "D",
+          "text": "By a shutdown message the DataNode sends before crashing",
+          "correct": false,
+          "rationale": "A crashed or partitioned node cannot reliably send a graceful shutdown message; detection relies instead on the missing heartbeat that the NameNode notices."
         }
       ]
     },
@@ -2003,15 +2003,15 @@
         },
         {
           "label": "C",
-          "text": "To decide how files are split and read into key-value pairs",
-          "correct": false,
-          "rationale": "Deciding splitting/reading is handled by Input Format and Record Reader in MapReduce, not by DataNodes. A DataNode's role is to store and serve the physical data blocks."
-        },
-        {
-          "label": "D",
           "text": "To store the actual data blocks on local storage and serve them on request",
           "correct": true,
           "rationale": "DataNodes are the slave 'block servers' that store the actual data blocks in their local filesystem and store/retrieve them on request."
+        },
+        {
+          "label": "D",
+          "text": "To decide how files are split and read into key-value pairs",
+          "correct": false,
+          "rationale": "Deciding splitting/reading is handled by Input Format and Record Reader in MapReduce, not by DataNodes. A DataNode's role is to store and serve the physical data blocks."
         }
       ]
     },
@@ -2024,15 +2024,15 @@
       "options": [
         {
           "label": "A",
-          "text": "It could only run a single Map operator and no Reduce operator",
-          "correct": false,
-          "rationale": "MapReduce supports both Map and Reduce; the motivating problem was not a missing operator. The real issue was the heavy disk I/O caused by reading from and writing to HDFS each iteration or stage."
-        },
-        {
-          "label": "B",
           "text": "It required every job to be written exclusively in Python",
           "correct": false,
           "rationale": "Hadoop MapReduce's primary environment was Java, not Python, and language choice was not the core performance motivation. The motivation for Spark was reducing slow repeated disk I/O by keeping data in memory."
+        },
+        {
+          "label": "B",
+          "text": "It could only run a single Map operator and no Reduce operator",
+          "correct": false,
+          "rationale": "MapReduce supports both Map and Reduce; the motivating problem was not a missing operator. The real issue was the heavy disk I/O caused by reading from and writing to HDFS each iteration or stage."
         },
         {
           "label": "C",
@@ -2057,15 +2057,15 @@
       "options": [
         {
           "label": "A",
-          "text": "Active Catalogs, since a metadata layer reduces the columns scanned",
-          "correct": false,
-          "rationale": "Active Catalogs make data searchable and usable but do not reduce columns scanned. Reducing column I/O via columnar formats is the Format Efficiency pillar."
-        },
-        {
-          "label": "B",
           "text": "Format Efficiency, since machine-optimized columnar formats dictate analytical performance",
           "correct": true,
           "rationale": "Correct. Format Efficiency is the pillar stating that machine-optimized columnar formats like Parquet and ORC dictate analytical performance, which is exactly the lever for reading only a few of many columns."
+        },
+        {
+          "label": "B",
+          "text": "Files First, since storing data as files automatically minimizes I/O",
+          "correct": false,
+          "rationale": "Files First concerns storing data as files in scalable buckets, not the column-level read efficiency that columnar formats provide under Format Efficiency."
         },
         {
           "label": "C",
@@ -2075,9 +2075,9 @@
         },
         {
           "label": "D",
-          "text": "Files First, since storing data as files automatically minimizes I/O",
+          "text": "Active Catalogs, since a metadata layer reduces the columns scanned",
           "correct": false,
-          "rationale": "Files First concerns storing data as files in scalable buckets, not the column-level read efficiency that columnar formats provide under Format Efficiency."
+          "rationale": "Active Catalogs make data searchable and usable but do not reduce columns scanned. Reducing column I/O via columnar formats is the Format Efficiency pillar."
         }
       ]
     },
@@ -2090,9 +2090,9 @@
       "options": [
         {
           "label": "A",
-          "text": "The unveiling of Apache Hadoop",
+          "text": "The first appearance of the term 'Big Data'",
           "correct": false,
-          "rationale": "Hadoop was unveiled in 2006, after MapReduce. The 2004 distributed-processing programming model on commodity hardware was Google's MapReduce."
+          "rationale": "The term 'Big Data' emerged in the 1990s, not 2004, and it is a term rather than a distributed-processing programming model. The 2004 milestone was MapReduce."
         },
         {
           "label": "B",
@@ -2102,9 +2102,9 @@
         },
         {
           "label": "C",
-          "text": "The first appearance of the term 'Big Data'",
+          "text": "The unveiling of Apache Hadoop",
           "correct": false,
-          "rationale": "The term 'Big Data' emerged in the 1990s, not 2004, and it is a term rather than a distributed-processing programming model. The 2004 milestone was MapReduce."
+          "rationale": "Hadoop was unveiled in 2006, after MapReduce. The 2004 distributed-processing programming model on commodity hardware was Google's MapReduce."
         },
         {
           "label": "D",
@@ -2135,15 +2135,15 @@
         },
         {
           "label": "C",
-          "text": "When analytical queries on massive datasets target only a fraction of the available columns",
-          "correct": true,
-          "rationale": "Correct. Columnar storage is hyper-efficient for massive datasets where analytical queries touch only a small subset of columns, since it reads just those columns."
-        },
-        {
-          "label": "D",
           "text": "When the dataset is small and human readability is the priority",
           "correct": false,
           "rationale": "Small, human-readable needs favor text formats like CSV. Columnar binary formats target large-scale analytics, not small human-readable datasets."
+        },
+        {
+          "label": "D",
+          "text": "When analytical queries on massive datasets target only a fraction of the available columns",
+          "correct": true,
+          "rationale": "Correct. Columnar storage is hyper-efficient for massive datasets where analytical queries touch only a small subset of columns, since it reads just those columns."
         }
       ]
     },
@@ -2162,21 +2162,21 @@
         },
         {
           "label": "B",
+          "text": "MLlib",
+          "correct": false,
+          "rationale": "MLlib is the machine-learning library offering parallel algorithms, not the SQL/structured-data engine. Querying structured datasets with Hive QL and a query optimizer is Spark SQL's role."
+        },
+        {
+          "label": "C",
           "text": "Spark SQL",
           "correct": true,
           "rationale": "Spark SQL interacts with structured data via SQL or querying APIs, is based on Datasets, supports the Hive Query Language and sources like Hive tables, Parquet, and JSON, and uses a query optimizer engine."
         },
         {
-          "label": "C",
+          "label": "D",
           "text": "GraphFrames",
           "correct": false,
           "rationale": "GraphFrames is a graph library based on DataFrames and Python. It is not the general structured-query engine with Hive QL and a query optimizer; that is Spark SQL."
-        },
-        {
-          "label": "D",
-          "text": "MLlib",
-          "correct": false,
-          "rationale": "MLlib is the machine-learning library offering parallel algorithms, not the SQL/structured-data engine. Querying structured datasets with Hive QL and a query optimizer is Spark SQL's role."
         }
       ]
     },
@@ -2201,15 +2201,15 @@
         },
         {
           "label": "C",
-          "text": "The NameNode immediately reassigns its metadata duties to the dead node's replicas",
-          "correct": false,
-          "rationale": "Metadata duties belong solely to the NameNode (with a standby), not to DataNode replicas; data blocks do not take over metadata. The real effect is that under-replicated blocks need re-replication."
-        },
-        {
-          "label": "D",
           "text": "The cluster halts until the dead DataNode is physically replaced",
           "correct": false,
           "rationale": "Hadoop is designed to tolerate failures and keep running by redirecting work and re-replicating; it does not halt. The consequence is re-replication of now under-replicated blocks."
+        },
+        {
+          "label": "D",
+          "text": "The NameNode immediately reassigns its metadata duties to the dead node's replicas",
+          "correct": false,
+          "rationale": "Metadata duties belong solely to the NameNode (with a standby), not to DataNode replicas; data blocks do not take over metadata. The real effect is that under-replicated blocks need re-replication."
         }
       ]
     },
@@ -2222,27 +2222,27 @@
       "options": [
         {
           "label": "A",
-          "text": "The rigid, predefined schema must be altered and applied across all existing rows",
-          "correct": true,
-          "rationale": "Correct. Relational databases enforce a rigid, explicit schema (schema-on-write). Adding a new feature means altering that schema and propagating the change to millions of existing rows, which can require significant downtime."
-        },
-        {
-          "label": "B",
           "text": "Relational databases cannot store image data of any kind",
           "correct": false,
           "rationale": "Wrong. Relational databases can store binary/image data (e.g., as BLOBs). The downtime problem stems from altering the rigid schema across existing rows, not from an inability to store images."
         },
         {
-          "label": "C",
+          "label": "B",
           "text": "The database automatically replicates every row to peer nodes during a schema change",
           "correct": false,
           "rationale": "Wrong. Peer-to-peer multi-master replication is a NoSQL trait, not the cause of RDBMS downtime. The relational downtime is caused by applying a rigid schema change to all existing rows."
         },
         {
-          "label": "D",
+          "label": "C",
           "text": "Relational databases use schema-on-read, forcing a re-read of all rows",
           "correct": false,
           "rationale": "Wrong. Relational databases use schema-on-write, not schema-on-read (that is a NoSQL characteristic). The problem is the rigid predefined schema needing alteration across existing rows."
+        },
+        {
+          "label": "D",
+          "text": "The rigid, predefined schema must be altered and applied across all existing rows",
+          "correct": true,
+          "rationale": "Correct. Relational databases enforce a rigid, explicit schema (schema-on-write). Adding a new feature means altering that schema and propagating the change to millions of existing rows, which can require significant downtime."
         }
       ]
     },
@@ -2255,9 +2255,9 @@
       "options": [
         {
           "label": "A",
-          "text": "Optimized for low-latency random access to many small files",
+          "text": "Optimized for interactive sub-millisecond query responses",
           "correct": false,
-          "rationale": "HDFS is explicitly NOT optimized for low-latency access; that contradicts its design. It is optimized for high-throughput batch access to very large datasets."
+          "rationale": "Sub-millisecond interactive responses describe low-latency systems, which HDFS is not. HDFS targets high-throughput batch processing of large datasets."
         },
         {
           "label": "B",
@@ -2267,9 +2267,9 @@
         },
         {
           "label": "C",
-          "text": "Optimized for interactive sub-millisecond query responses",
+          "text": "Optimized for low-latency random access to many small files",
           "correct": false,
-          "rationale": "Sub-millisecond interactive responses describe low-latency systems, which HDFS is not. HDFS targets high-throughput batch processing of large datasets."
+          "rationale": "HDFS is explicitly NOT optimized for low-latency access; that contradicts its design. It is optimized for high-throughput batch access to very large datasets."
         },
         {
           "label": "D",
@@ -2288,9 +2288,9 @@
       "options": [
         {
           "label": "A",
-          "text": "The decline of the public internet and digital content",
+          "text": "Rising costs of data storage and processing",
           "correct": false,
-          "rationale": "The opposite is true: an explosion of digital content drives big data. A decline would reduce data, not drive its growth. A genuine driver is the growth of IoT and sensors."
+          "rationale": "A key driver is the cost reduction in storage and processing, not rising costs; cheaper storage and processing enabled big data."
         },
         {
           "label": "B",
@@ -2300,15 +2300,15 @@
         },
         {
           "label": "C",
-          "text": "Rising costs of data storage and processing",
-          "correct": false,
-          "rationale": "A key driver is the cost reduction in storage and processing, not rising costs; cheaper storage and processing enabled big data."
-        },
-        {
-          "label": "D",
           "text": "A shift away from distributed computing toward single mainframes",
           "correct": false,
           "rationale": "Advances in distributed and cloud computing are a key driver; a shift back to single mainframes would contradict this enabler of big data."
+        },
+        {
+          "label": "D",
+          "text": "The decline of the public internet and digital content",
+          "correct": false,
+          "rationale": "The opposite is true: an explosion of digital content drives big data. A decline would reduce data, not drive its growth. A genuine driver is the growth of IoT and sensors."
         }
       ]
     },
@@ -2321,27 +2321,27 @@
       "options": [
         {
           "label": "A",
-          "text": "Relational Data Document; a table-like structure for SQL queries",
-          "correct": false,
-          "rationale": "This is not the expansion or role of an RDD. RDD stands for Resilient Distributed Dataset and is Spark's primary abstraction, a distributed collection of objects."
-        },
-        {
-          "label": "B",
-          "text": "Resilient Distributed Dataset; Spark's primary abstraction, a distributed collection of objects spread across cluster nodes",
-          "correct": true,
-          "rationale": "An RDD (Resilient Distributed Dataset) is Spark's primary abstraction: a distributed collection of objects spread across the nodes of a cluster and split into partitions."
-        },
-        {
-          "label": "C",
           "text": "Redundant Disk Drive; a storage replication scheme",
           "correct": false,
           "rationale": "This is unrelated to Spark and confuses RDD with disk redundancy. RDD means Resilient Distributed Dataset, an in-memory distributed data abstraction."
         },
         {
-          "label": "D",
+          "label": "B",
           "text": "Rapid Data Dispatcher; a scheduler that submits tasks",
           "correct": false,
           "rationale": "RDD is not a scheduler. It is the Resilient Distributed Dataset, the distributed collection of objects that is Spark's central abstraction."
+        },
+        {
+          "label": "C",
+          "text": "Resilient Distributed Dataset; Spark's primary abstraction, a distributed collection of objects spread across cluster nodes",
+          "correct": true,
+          "rationale": "An RDD (Resilient Distributed Dataset) is Spark's primary abstraction: a distributed collection of objects spread across the nodes of a cluster and split into partitions."
+        },
+        {
+          "label": "D",
+          "text": "Relational Data Document; a table-like structure for SQL queries",
+          "correct": false,
+          "rationale": "This is not the expansion or role of an RDD. RDD stands for Resilient Distributed Dataset and is Spark's primary abstraction, a distributed collection of objects."
         }
       ]
     },
@@ -2354,27 +2354,27 @@
       "options": [
         {
           "label": "A",
-          "text": "The raw path holds untransformed JSON data, while the curated path holds partitioned, analytics-optimized Parquet data",
-          "correct": true,
-          "rationale": "Correct. The raw path stores untransformed JSON as received, while the curated path uses year/month partition folders and the columnar Parquet format optimized for analytics, reflecting progressive refinement."
-        },
-        {
-          "label": "B",
-          "text": "Both paths use schema-on-write because the folder names define a fixed schema",
-          "correct": false,
-          "rationale": "Folder names express partitioning and zones, not a write-time enforced schema. A data lake applies schema-on-read over these files, so this is incorrect."
-        },
-        {
-          "label": "C",
           "text": "The curated Parquet file is human-readable while the raw JSON is binary",
           "correct": false,
           "rationale": "This is reversed: JSON is human-readable text, while Parquet is a columnar binary format not directly human-readable. The curated path is the binary, analytics-optimized one."
         },
         {
-          "label": "D",
+          "label": "B",
           "text": "The raw path already applies partition pruning by date while the curated path does not",
           "correct": false,
           "rationale": "It is the curated path that uses explicit year= and month= partition folders enabling pruning; the raw path's date folders are not in the queried partitioned table form. This option reverses the situation."
+        },
+        {
+          "label": "C",
+          "text": "Both paths use schema-on-write because the folder names define a fixed schema",
+          "correct": false,
+          "rationale": "Folder names express partitioning and zones, not a write-time enforced schema. A data lake applies schema-on-read over these files, so this is incorrect."
+        },
+        {
+          "label": "D",
+          "text": "The raw path holds untransformed JSON data, while the curated path holds partitioned, analytics-optimized Parquet data",
+          "correct": true,
+          "rationale": "Correct. The raw path stores untransformed JSON as received, while the curated path uses year/month partition folders and the columnar Parquet format optimized for analytics, reflecting progressive refinement."
         }
       ]
     },
@@ -2393,21 +2393,21 @@
         },
         {
           "label": "B",
-          "text": "It automatically converts text files into columnar binary format",
-          "correct": false,
-          "rationale": "Partitioning organizes files into folders by filter columns; it does not change file formats. The cost benefit comes from scanning less data, not from format conversion."
-        },
-        {
-          "label": "C",
           "text": "It removes the need for any metadata catalog",
           "correct": false,
           "rationale": "Partitioning does not replace a data catalog; catalogs still map and describe datasets. Partitioning's added benefit is reduced scanning and therefore lower cost."
         },
         {
-          "label": "D",
+          "label": "C",
           "text": "It guarantees ACID transactions on the underlying files",
           "correct": false,
           "rationale": "ACID guarantees come from lakehouse table formats, not from partitioning. Partitioning's payoff is reduced data scanned, yielding faster, cheaper queries."
+        },
+        {
+          "label": "D",
+          "text": "It automatically converts text files into columnar binary format",
+          "correct": false,
+          "rationale": "Partitioning organizes files into folders by filter columns; it does not change file formats. The cost benefit comes from scanning less data, not from format conversion."
         }
       ]
     },
@@ -2420,15 +2420,15 @@
       "options": [
         {
           "label": "A",
-          "text": "Every node always returns the most current global value",
+          "text": "The data is partitioned evenly across all available disks",
           "correct": false,
-          "rationale": "Wrong. Always returning the most current global value describes Consistency. Partition tolerance is about continuing to operate when messages between nodes are dropped."
+          "rationale": "Wrong. Even disk partitioning is a storage layout concern. CAP's Partition tolerance is about surviving communication failures between nodes."
         },
         {
           "label": "B",
-          "text": "The database maintains operations despite network failures dropping messages between nodes",
-          "correct": true,
-          "rationale": "Correct. Partition tolerance means the database keeps operating even when network failures drop messages between nodes."
+          "text": "Every node always returns the most current global value",
+          "correct": false,
+          "rationale": "Wrong. Always returning the most current global value describes Consistency. Partition tolerance is about continuing to operate when messages between nodes are dropped."
         },
         {
           "label": "C",
@@ -2438,9 +2438,9 @@
         },
         {
           "label": "D",
-          "text": "The data is partitioned evenly across all available disks",
-          "correct": false,
-          "rationale": "Wrong. Even disk partitioning is a storage layout concern. CAP's Partition tolerance is about surviving communication failures between nodes."
+          "text": "The database maintains operations despite network failures dropping messages between nodes",
+          "correct": true,
+          "rationale": "Correct. Partition tolerance means the database keeps operating even when network failures drop messages between nodes."
         }
       ]
     },
@@ -2453,9 +2453,9 @@
       "options": [
         {
           "label": "A",
-          "text": "Spark Streaming",
-          "correct": false,
-          "rationale": "Spark Streaming is a genuine component for processing live data streams in real time, so it belongs in the stack and is not the exception."
+          "text": "HBaseStore",
+          "correct": true,
+          "rationale": "There is no component called HBaseStore in Spark's stack. The described components are Spark Core, Spark SQL, Spark Streaming, MLlib, GraphX, and GraphFrames, making this the exception."
         },
         {
           "label": "B",
@@ -2465,15 +2465,15 @@
         },
         {
           "label": "C",
-          "text": "HBaseStore",
-          "correct": true,
-          "rationale": "There is no component called HBaseStore in Spark's stack. The described components are Spark Core, Spark SQL, Spark Streaming, MLlib, GraphX, and GraphFrames, making this the exception."
-        },
-        {
-          "label": "D",
           "text": "GraphX",
           "correct": false,
           "rationale": "GraphX is a real graph-processing library (subgraph searching, PageRank) within the stack, so it belongs and is not the exception."
+        },
+        {
+          "label": "D",
+          "text": "Spark Streaming",
+          "correct": false,
+          "rationale": "Spark Streaming is a genuine component for processing live data streams in real time, so it belongs in the stack and is not the exception."
         }
       ]
     },
@@ -2486,15 +2486,15 @@
       "options": [
         {
           "label": "A",
-          "text": "Data locality, because moving computation is cheaper than moving large volumes of data",
-          "correct": true,
-          "rationale": "Data locality is the principle of moving computation to where data resides; it is used because transferring large data is far more expensive than sending the (small) computation to the data."
-        },
-        {
-          "label": "B",
           "text": "Write-once, read-many, because data is read repeatedly",
           "correct": false,
           "rationale": "Write-once read-many describes Hadoop's access pattern, not the placement of computation. Moving computation to data is the data locality principle, chosen to avoid costly large-data transfers."
+        },
+        {
+          "label": "B",
+          "text": "Resource sharing, because nodes share the cluster",
+          "correct": false,
+          "rationale": "Resource sharing concerns multiple jobs sharing cluster resources, not where computation runs relative to data. The described concept is data locality, motivated by the cost of moving large data."
         },
         {
           "label": "C",
@@ -2504,9 +2504,9 @@
         },
         {
           "label": "D",
-          "text": "Resource sharing, because nodes share the cluster",
-          "correct": false,
-          "rationale": "Resource sharing concerns multiple jobs sharing cluster resources, not where computation runs relative to data. The described concept is data locality, motivated by the cost of moving large data."
+          "text": "Data locality, because moving computation is cheaper than moving large volumes of data",
+          "correct": true,
+          "rationale": "Data locality is the principle of moving computation to where data resides; it is used because transferring large data is far more expensive than sending the (small) computation to the data."
         }
       ]
     },
@@ -2519,21 +2519,21 @@
       "options": [
         {
           "label": "A",
+          "text": "Vertical scaling and horizontal scaling",
+          "correct": false,
+          "rationale": "These terms describe scaling strategy (scale-up vs scale-out), not when schema is applied; the question is about schema-on-write versus schema-on-read."
+        },
+        {
+          "label": "B",
           "text": "Schema-on-read and schema-on-write",
           "correct": false,
           "rationale": "The labels are reversed. Enforcing schema at write time is schema-on-write (traditional), and applying structure at read time is schema-on-read (big data)."
         },
         {
-          "label": "B",
+          "label": "C",
           "text": "Schema-on-write and schema-on-read",
           "correct": true,
           "rationale": "Traditional systems use a predefined, fixed schema applied at write time (schema-on-write), whereas big data platforms apply a flexible schema at read time (schema-on-read)."
-        },
-        {
-          "label": "C",
-          "text": "Vertical scaling and horizontal scaling",
-          "correct": false,
-          "rationale": "These terms describe scaling strategy (scale-up vs scale-out), not when schema is applied; the question is about schema-on-write versus schema-on-read."
         },
         {
           "label": "D",
@@ -2552,9 +2552,9 @@
       "options": [
         {
           "label": "A",
-          "text": "Sqoop transfers data between relational databases and Hadoop (import to HDFS, export back)",
+          "text": "Flume reliably collects, aggregates, and moves large amounts of log data into HDFS",
           "correct": false,
-          "rationale": "This pairing is correct: Sqoop ('SQL-to-Hadoop') integrates data by importing from and exporting to RDBMS, so it is not the exception."
+          "rationale": "This pairing is correct: Flume is the reliable distributed system for ingesting large log data into HDFS, so it is not the exception."
         },
         {
           "label": "B",
@@ -2564,9 +2564,9 @@
         },
         {
           "label": "C",
-          "text": "Flume reliably collects, aggregates, and moves large amounts of log data into HDFS",
+          "text": "Sqoop transfers data between relational databases and Hadoop (import to HDFS, export back)",
           "correct": false,
-          "rationale": "This pairing is correct: Flume is the reliable distributed system for ingesting large log data into HDFS, so it is not the exception."
+          "rationale": "This pairing is correct: Sqoop ('SQL-to-Hadoop') integrates data by importing from and exporting to RDBMS, so it is not the exception."
         },
         {
           "label": "D",
@@ -2585,27 +2585,27 @@
       "options": [
         {
           "label": "A",
-          "text": "It determines which reduce task a given (K,V) pair is sent to, and map nodes must agree so each key consistently lands in the same partition",
-          "correct": true,
-          "rationale": "The partitioner assigns each (K,V) to a specific reduce task/partition; all map nodes must use the same scheme so that every occurrence of a given key is routed to the same reducer."
+          "text": "It sorts the intermediate keys within each partition before reduce",
+          "correct": false,
+          "rationale": "Sorting within a partition is part of the merge/shuffle-and-sort step, not the partitioner's job. The partitioner only decides the destination partition for each (K,V) pair."
         },
         {
           "label": "B",
-          "text": "It defines how input files are split into units of work for map tasks",
-          "correct": false,
-          "rationale": "Defining how files are split is the Input Format / input split concept, not the partitioner. The partitioner instead routes intermediate (K,V) pairs to the correct reduce task."
-        },
-        {
-          "label": "C",
           "text": "It writes the reducers' output pairs to the final output files",
           "correct": false,
           "rationale": "Writing final output is the Output Format's role. The partitioner operates on the map side to assign intermediate pairs to reduce partitions."
         },
         {
-          "label": "D",
-          "text": "It sorts the intermediate keys within each partition before reduce",
+          "label": "C",
+          "text": "It defines how input files are split into units of work for map tasks",
           "correct": false,
-          "rationale": "Sorting within a partition is part of the merge/shuffle-and-sort step, not the partitioner's job. The partitioner only decides the destination partition for each (K,V) pair."
+          "rationale": "Defining how files are split is the Input Format / input split concept, not the partitioner. The partitioner instead routes intermediate (K,V) pairs to the correct reduce task."
+        },
+        {
+          "label": "D",
+          "text": "It determines which reduce task a given (K,V) pair is sent to, and map nodes must agree so each key consistently lands in the same partition",
+          "correct": true,
+          "rationale": "The partitioner assigns each (K,V) to a specific reduce task/partition; all map nodes must use the same scheme so that every occurrence of a given key is routed to the same reducer."
         }
       ]
     },
@@ -2618,9 +2618,9 @@
       "options": [
         {
           "label": "A",
-          "text": "The ability to store any data at all during peak load",
-          "correct": false,
-          "rationale": "Wrong. BASE systems remain 'Basically Available' and can still store data under load. What is relaxed is strict, instantaneous consistency, not storage capability."
+          "text": "Strict, instantaneous consistency in favor of eventual consistency",
+          "correct": true,
+          "rationale": "Correct. BASE relaxes the strict, instantaneous consistency of ACID toward eventual consistency, gaining availability and scalability in distributed deployments."
         },
         {
           "label": "B",
@@ -2630,9 +2630,9 @@
         },
         {
           "label": "C",
-          "text": "Strict, instantaneous consistency in favor of eventual consistency",
-          "correct": true,
-          "rationale": "Correct. BASE relaxes the strict, instantaneous consistency of ACID toward eventual consistency, gaining availability and scalability in distributed deployments."
+          "text": "The ability to store any data at all during peak load",
+          "correct": false,
+          "rationale": "Wrong. BASE systems remain 'Basically Available' and can still store data under load. What is relaxed is strict, instantaneous consistency, not storage capability."
         },
         {
           "label": "D",
@@ -2651,21 +2651,21 @@
       "options": [
         {
           "label": "A",
+          "text": "It assigns each (K,V) pair to a partition for the appropriate reducer",
+          "correct": false,
+          "rationale": "Assigning pairs to partitions is the partitioner's job during the map side, not reduce's work. Reduce combines the grouped per-word counts into final totals."
+        },
+        {
+          "label": "B",
           "text": "It re-reads the original input files to recount each word independently",
           "correct": false,
           "rationale": "Reduce never re-reads the raw input; it consumes the grouped intermediate output from the maps. Its job is to combine the per-word counts that the maps already emitted."
         },
         {
-          "label": "B",
+          "label": "C",
           "text": "It splits the input file into blocks for the map tasks",
           "correct": false,
           "rationale": "Splitting input into blocks/splits happens before mapping, not in reduce. Reduce instead aggregates the grouped intermediate counts into final totals."
-        },
-        {
-          "label": "C",
-          "text": "It assigns each (K,V) pair to a partition for the appropriate reducer",
-          "correct": false,
-          "rationale": "Assigning pairs to partitions is the partitioner's job during the map side, not reduce's work. Reduce combines the grouped per-word counts into final totals."
         },
         {
           "label": "D",
@@ -2750,15 +2750,15 @@
       "options": [
         {
           "label": "A",
-          "text": "Always, because RDDs are a disk-only abstraction",
+          "text": "Never, because executors have no access to disk",
           "correct": false,
-          "rationale": "RDDs are kept in main memory whenever possible; they are not disk-only. Disk is used only as a fallback when memory is insufficient."
+          "rationale": "Executors can and do use local disk as a fallback. RDDs go to local disk specifically when memory is insufficient."
         },
         {
           "label": "B",
-          "text": "Only when the driver explicitly requests disk persistence for fault tolerance",
+          "text": "Always, because RDDs are a disk-only abstraction",
           "correct": false,
-          "rationale": "The fallback to disk is driven by insufficient memory, not by a mandatory driver request for fault tolerance. Spark prefers main memory and spills to local disk when memory runs short."
+          "rationale": "RDDs are kept in main memory whenever possible; they are not disk-only. Disk is used only as a fallback when memory is insufficient."
         },
         {
           "label": "C",
@@ -2768,9 +2768,9 @@
         },
         {
           "label": "D",
-          "text": "Never, because executors have no access to disk",
+          "text": "Only when the driver explicitly requests disk persistence for fault tolerance",
           "correct": false,
-          "rationale": "Executors can and do use local disk as a fallback. RDDs go to local disk specifically when memory is insufficient."
+          "rationale": "The fallback to disk is driven by insufficient memory, not by a mandatory driver request for fault tolerance. Spark prefers main memory and spills to local disk when memory runs short."
         }
       ]
     },
@@ -2783,27 +2783,27 @@
       "options": [
         {
           "label": "A",
-          "text": "Spark SQL",
-          "correct": false,
-          "rationale": "Spark SQL is built on top of Spark Core to query structured data via SQL. The foundational functionality (task scheduling, memory management, fault recovery, RDD APIs) is provided by Spark Core."
-        },
-        {
-          "label": "B",
-          "text": "MLlib",
-          "correct": false,
-          "rationale": "MLlib provides parallel machine-learning algorithms and sits on top of Spark Core. The basic scheduling, memory management, and RDD APIs come from Spark Core itself."
-        },
-        {
-          "label": "C",
           "text": "Spark Core",
           "correct": true,
           "rationale": "Spark Core supplies the basic functionality used by all components: task scheduling, memory management, and fault recovery, and exposes the APIs to create RDDs and apply transformations and actions."
         },
         {
-          "label": "D",
+          "label": "B",
           "text": "GraphX",
           "correct": false,
           "rationale": "GraphX is a graph-processing library layered on Spark Core. The core scheduling, memory, fault-recovery, and RDD-creation functionality belongs to Spark Core."
+        },
+        {
+          "label": "C",
+          "text": "MLlib",
+          "correct": false,
+          "rationale": "MLlib provides parallel machine-learning algorithms and sits on top of Spark Core. The basic scheduling, memory management, and RDD APIs come from Spark Core itself."
+        },
+        {
+          "label": "D",
+          "text": "Spark SQL",
+          "correct": false,
+          "rationale": "Spark SQL is built on top of Spark Core to query structured data via SQL. The foundational functionality (task scheduling, memory management, fault recovery, RDD APIs) is provided by Spark Core."
         }
       ]
     },
@@ -2816,9 +2816,9 @@
       "options": [
         {
           "label": "A",
-          "text": "Scalable: nodes can be added without changing data formats or jobs",
+          "text": "Fault tolerant: redirects work to another data location when a node is lost",
           "correct": false,
-          "rationale": "This IS a characteristic of HDFS: it scales by adding nodes without requiring changes to formats or jobs, so it is not the exception."
+          "rationale": "This IS a characteristic of HDFS: on node loss it redirects work to another data location, providing fault tolerance, so it is not the exception."
         },
         {
           "label": "B",
@@ -2834,9 +2834,9 @@
         },
         {
           "label": "D",
-          "text": "Fault tolerant: redirects work to another data location when a node is lost",
+          "text": "Scalable: nodes can be added without changing data formats or jobs",
           "correct": false,
-          "rationale": "This IS a characteristic of HDFS: on node loss it redirects work to another data location, providing fault tolerance, so it is not the exception."
+          "rationale": "This IS a characteristic of HDFS: it scales by adding nodes without requiring changes to formats or jobs, so it is not the exception."
         }
       ]
     },
@@ -2849,15 +2849,15 @@
       "options": [
         {
           "label": "A",
-          "text": "Volume",
-          "correct": false,
-          "rationale": "Volume refers to the massive size of the data accumulated over time; the scenario emphasizes the speed of generation and near-real-time processing, which is Velocity."
-        },
-        {
-          "label": "B",
           "text": "Velocity",
           "correct": true,
           "rationale": "Velocity is the high-speed generation and near-real-time processing of data, exemplified by RFID, sensors, and smart metering, which is exactly what the scenario describes."
+        },
+        {
+          "label": "B",
+          "text": "Volume",
+          "correct": false,
+          "rationale": "Volume refers to the massive size of the data accumulated over time; the scenario emphasizes the speed of generation and near-real-time processing, which is Velocity."
         },
         {
           "label": "C",
@@ -2888,15 +2888,15 @@
         },
         {
           "label": "B",
-          "text": "Because partition tolerance is optional and rarely needed",
-          "correct": false,
-          "rationale": "Wrong. In real distributed systems partitions are inevitable, so partition tolerance is effectively required, which forces the C-versus-A trade-off."
-        },
-        {
-          "label": "C",
           "text": "Because network partitions are inevitable, so when one occurs the system must choose to favor C or A",
           "correct": true,
           "rationale": "Correct. Since network partitions are unavoidable in distributed systems, partition tolerance is a given, and during a partition the system must favor either Consistency or Availability."
+        },
+        {
+          "label": "C",
+          "text": "Because partition tolerance is optional and rarely needed",
+          "correct": false,
+          "rationale": "Wrong. In real distributed systems partitions are inevitable, so partition tolerance is effectively required, which forces the C-versus-A trade-off."
         },
         {
           "label": "D",
@@ -2915,27 +2915,27 @@
       "options": [
         {
           "label": "A",
-          "text": "The job is aborted and restarted from the beginning",
-          "correct": false,
-          "rationale": "MapReduce does not restart whole jobs over a slow task. It launches speculative copies of the straggler so the faster copy can finish first."
-        },
-        {
-          "label": "B",
-          "text": "The slow task is skipped and its data is dropped from the result",
-          "correct": false,
-          "rationale": "Dropping a task's data would produce incorrect results, which MapReduce avoids. Instead it runs a duplicate (speculative) copy of the straggler to complete the work faster."
-        },
-        {
-          "label": "C",
           "text": "A speculative duplicate copy of the slow task is launched, and the first to finish commits",
           "correct": true,
           "rationale": "Speculative execution locates slow stragglers and runs replicated copies that optimistically commit before the straggler, since a job is dominated by its slowest task."
         },
         {
-          "label": "D",
+          "label": "B",
           "text": "The JobTracker assumes the TaskTracker has crashed after one minute and re-executes all its tasks",
           "correct": false,
           "rationale": "That one-minute crash-detection mechanism handles a TaskTracker that stops communicating (failure), not a task that is merely slow. A slow-but-alive task is handled by speculative execution of a duplicate copy."
+        },
+        {
+          "label": "C",
+          "text": "The job is aborted and restarted from the beginning",
+          "correct": false,
+          "rationale": "MapReduce does not restart whole jobs over a slow task. It launches speculative copies of the straggler so the faster copy can finish first."
+        },
+        {
+          "label": "D",
+          "text": "The slow task is skipped and its data is dropped from the result",
+          "correct": false,
+          "rationale": "Dropping a task's data would produce incorrect results, which MapReduce avoids. Instead it runs a duplicate (speculative) copy of the straggler to complete the work faster."
         }
       ]
     },
@@ -2954,15 +2954,15 @@
         },
         {
           "label": "B",
-          "text": "Both traditional and big data systems rely primarily on vertical scaling",
-          "correct": false,
-          "rationale": "Big data systems emphasize horizontal scaling across distributed clusters; only traditional systems lean on vertical scaling, so this is incorrect."
-        },
-        {
-          "label": "C",
           "text": "Traditional systems use vertical scaling (scale-up); big data systems use horizontal scaling (scale-out)",
           "correct": true,
           "rationale": "Traditional systems scale up by adding power to a single machine, while big data systems scale out by adding more commodity nodes to a distributed cluster, exactly as described."
+        },
+        {
+          "label": "C",
+          "text": "Both traditional and big data systems rely primarily on vertical scaling",
+          "correct": false,
+          "rationale": "Big data systems emphasize horizontal scaling across distributed clusters; only traditional systems lean on vertical scaling, so this is incorrect."
         },
         {
           "label": "D",
@@ -2993,15 +2993,15 @@
         },
         {
           "label": "C",
-          "text": "Every user has an identical view of the data at any given instant",
-          "correct": true,
-          "rationale": "Correct. In CAP, Consistency (linearizability) means every user has an identical view of the data at any given instant."
-        },
-        {
-          "label": "D",
           "text": "Data is automatically replicated to at least three nodes",
           "correct": false,
           "rationale": "Wrong. A replica count is an implementation detail, not the CAP definition. Consistency means all users observe an identical view at any instant."
+        },
+        {
+          "label": "D",
+          "text": "Every user has an identical view of the data at any given instant",
+          "correct": true,
+          "rationale": "Correct. In CAP, Consistency (linearizability) means every user has an identical view of the data at any given instant."
         }
       ]
     },
@@ -3014,27 +3014,27 @@
       "options": [
         {
           "label": "A",
-          "text": "AP edge, working only when strong consistency is disabled",
+          "text": "CA edge, holding precisely because it tolerates frequent partitions",
           "correct": false,
-          "rationale": "Wrong. Traditional RDBMS sit on the CA edge, not AP. AP databases (e.g., Cassandra) favor availability under partitions, which is the opposite priority."
+          "rationale": "Wrong. The CA placement holds only when partitions do NOT occur. A CA system does not provide partition tolerance, so it cannot rely on tolerating frequent partitions."
         },
         {
           "label": "B",
-          "text": "CP edge, shutting down out-of-sync nodes during partitions",
-          "correct": false,
-          "rationale": "Wrong. Shutting down out-of-sync nodes during partitions describes CP systems like MongoDB or HBase. Classic RDBMS are CA and assume no partitions."
-        },
-        {
-          "label": "C",
           "text": "CA edge, holding only when there are no physical network partitions",
           "correct": true,
           "rationale": "Correct. Traditional RDBMS occupy the CA edge (Consistency + Availability) and work as such only when there are no physical network partitions, i.e., a single node or tightly coupled system."
         },
         {
-          "label": "D",
-          "text": "CA edge, holding precisely because it tolerates frequent partitions",
+          "label": "C",
+          "text": "CP edge, shutting down out-of-sync nodes during partitions",
           "correct": false,
-          "rationale": "Wrong. The CA placement holds only when partitions do NOT occur. A CA system does not provide partition tolerance, so it cannot rely on tolerating frequent partitions."
+          "rationale": "Wrong. Shutting down out-of-sync nodes during partitions describes CP systems like MongoDB or HBase. Classic RDBMS are CA and assume no partitions."
+        },
+        {
+          "label": "D",
+          "text": "AP edge, working only when strong consistency is disabled",
+          "correct": false,
+          "rationale": "Wrong. Traditional RDBMS sit on the CA edge, not AP. AP databases (e.g., Cassandra) favor availability under partitions, which is the opposite priority."
         }
       ]
     },
@@ -3047,15 +3047,15 @@
       "options": [
         {
           "label": "A",
-          "text": "Real-time ingestion",
-          "correct": false,
-          "rationale": "Real-time ingestion processes data immediately as it is generated; a nightly scheduled job is interval-based, which is batch ingestion."
-        },
-        {
-          "label": "B",
           "text": "Batch ingestion",
           "correct": true,
           "rationale": "Batch ingestion is scheduled or interval-based, such as a nightly load, exactly matching a job that runs every midnight."
+        },
+        {
+          "label": "B",
+          "text": "Schema-on-read ingestion",
+          "correct": false,
+          "rationale": "Schema-on-read describes when structure is applied to data, not the timing of loading. A nightly scheduled load is batch ingestion."
         },
         {
           "label": "C",
@@ -3065,9 +3065,9 @@
         },
         {
           "label": "D",
-          "text": "Schema-on-read ingestion",
+          "text": "Real-time ingestion",
           "correct": false,
-          "rationale": "Schema-on-read describes when structure is applied to data, not the timing of loading. A nightly scheduled load is batch ingestion."
+          "rationale": "Real-time ingestion processes data immediately as it is generated; a nightly scheduled job is interval-based, which is batch ingestion."
         }
       ]
     },
@@ -3080,9 +3080,9 @@
       "options": [
         {
           "label": "A",
-          "text": "region",
-          "correct": false,
-          "rationale": "Region is a recommended partition column because it has relatively few distinct values and is frequently filtered, producing manageable folder counts. The poor choice is a unique identifier like transaction_id."
+          "text": "transaction_id",
+          "correct": true,
+          "rationale": "Correct. Partitioning by a unique identifier such as transaction_id creates an enormous number of tiny folders, which is explicitly advised against."
         },
         {
           "label": "B",
@@ -3098,9 +3098,9 @@
         },
         {
           "label": "D",
-          "text": "transaction_id",
-          "correct": true,
-          "rationale": "Correct. Partitioning by a unique identifier such as transaction_id creates an enormous number of tiny folders, which is explicitly advised against."
+          "text": "region",
+          "correct": false,
+          "rationale": "Region is a recommended partition column because it has relatively few distinct values and is frequently filtered, producing manageable folder counts. The poor choice is a unique identifier like transaction_id."
         }
       ]
     },
@@ -3113,27 +3113,27 @@
       "options": [
         {
           "label": "A",
-          "text": "Data cleaning",
+          "text": "Structuring",
           "correct": false,
-          "rationale": "Data cleaning removes or corrects inaccurate records; converting data into a standardized format is normalization, not cleaning."
+          "rationale": "Structuring breaks unstructured or semi-structured data into structured form; producing a standardized format is normalization."
         },
         {
           "label": "B",
-          "text": "Data enrichment",
-          "correct": false,
-          "rationale": "Enrichment adds extra information or context to data; standardizing the format is normalization, a different transformation."
-        },
-        {
-          "label": "C",
           "text": "Normalization",
           "correct": true,
           "rationale": "Normalization is the transformation that converts data into a standardized format, exactly as described."
         },
         {
-          "label": "D",
-          "text": "Structuring",
+          "label": "C",
+          "text": "Data enrichment",
           "correct": false,
-          "rationale": "Structuring breaks unstructured or semi-structured data into structured form; producing a standardized format is normalization."
+          "rationale": "Enrichment adds extra information or context to data; standardizing the format is normalization, a different transformation."
+        },
+        {
+          "label": "D",
+          "text": "Data cleaning",
+          "correct": false,
+          "rationale": "Data cleaning removes or corrects inaccurate records; converting data into a standardized format is normalization, not cleaning."
         }
       ]
     },
@@ -3146,27 +3146,27 @@
       "options": [
         {
           "label": "A",
-          "text": "Amazon S3 cloud object storage",
-          "correct": false,
-          "rationale": "Amazon S3 is the modern cloud object storage standard, storing data as objects in scalable buckets, not the legacy on-premise block-distribution approach that HDFS represents."
-        },
-        {
-          "label": "B",
           "text": "A distributed file system such as HDFS",
           "correct": true,
           "rationale": "Correct. HDFS is the legacy distributed file system that divides files into hardware blocks distributed across physical on-premise machines."
         },
         {
-          "label": "C",
+          "label": "B",
           "text": "Azure Data Lake cloud buckets",
           "correct": false,
           "rationale": "Azure Data Lake is a modern cloud object storage service, not the legacy on-premise block-based file system that HDFS represents."
         },
         {
-          "label": "D",
+          "label": "C",
           "text": "Google Cloud Storage buckets",
           "correct": false,
           "rationale": "Google Cloud Storage is modern cloud object storage based on buckets and objects, contrasting with the legacy hardware-block distribution of HDFS."
+        },
+        {
+          "label": "D",
+          "text": "Amazon S3 cloud object storage",
+          "correct": false,
+          "rationale": "Amazon S3 is the modern cloud object storage standard, storing data as objects in scalable buckets, not the legacy on-premise block-distribution approach that HDFS represents."
         }
       ]
     },
@@ -3179,9 +3179,9 @@
       "options": [
         {
           "label": "A",
-          "text": "RDBMS depends on horizontal scaling, which is too slow for Big Data",
+          "text": "RDBMS cannot enforce ACID transactions beyond a fixed data size",
           "correct": false,
-          "rationale": "Wrong. Horizontal scaling (scale-out) is the NoSQL approach, not the RDBMS limitation. The scale-up wall refers to RDBMS relying on vertical scaling."
+          "rationale": "Wrong. ACID enforcement is not the scaling bottleneck described here. The scale-up wall is about vertical scaling reaching its physical/cost limits, not a hard data-size cap on ACID."
         },
         {
           "label": "B",
@@ -3191,15 +3191,15 @@
         },
         {
           "label": "C",
-          "text": "RDBMS can only ever run on a single CPU core",
+          "text": "RDBMS depends on horizontal scaling, which is too slow for Big Data",
           "correct": false,
-          "rationale": "Wrong. Relational databases use multiple cores; the limitation is the reliance on a single bigger machine (vertical scaling) rather than distributing across many servers."
+          "rationale": "Wrong. Horizontal scaling (scale-out) is the NoSQL approach, not the RDBMS limitation. The scale-up wall refers to RDBMS relying on vertical scaling."
         },
         {
           "label": "D",
-          "text": "RDBMS cannot enforce ACID transactions beyond a fixed data size",
+          "text": "RDBMS can only ever run on a single CPU core",
           "correct": false,
-          "rationale": "Wrong. ACID enforcement is not the scaling bottleneck described here. The scale-up wall is about vertical scaling reaching its physical/cost limits, not a hard data-size cap on ACID."
+          "rationale": "Wrong. Relational databases use multiple cores; the limitation is the reliance on a single bigger machine (vertical scaling) rather than distributing across many servers."
         }
       ]
     },
@@ -3218,9 +3218,9 @@
         },
         {
           "label": "B",
-          "text": "A single master node that all writes must pass through for strong consistency",
+          "text": "Centralized coordination of every node before any write completes",
           "correct": false,
-          "rationale": "Wrong. A single master enforcing strong consistency contradicts shared-nothing design, which uses peer-to-peer multi-master replication and eventual consistency."
+          "rationale": "Wrong. Shared-nothing aims for less coordination, not centralized coordination of every write. That heavy coordination would undermine its high distribution and availability."
         },
         {
           "label": "C",
@@ -3230,9 +3230,9 @@
         },
         {
           "label": "D",
-          "text": "Centralized coordination of every node before any write completes",
+          "text": "A single master node that all writes must pass through for strong consistency",
           "correct": false,
-          "rationale": "Wrong. Shared-nothing aims for less coordination, not centralized coordination of every write. That heavy coordination would undermine its high distribution and availability."
+          "rationale": "Wrong. A single master enforcing strong consistency contradicts shared-nothing design, which uses peer-to-peer multi-master replication and eventual consistency."
         }
       ]
     },
@@ -3245,27 +3245,27 @@
       "options": [
         {
           "label": "A",
-          "text": "Guaranteed elimination of all algorithmic bias",
-          "correct": false,
-          "rationale": "Algorithmic bias is listed as an ethical challenge of big data, not an advantage; big data does not guarantee its elimination. A genuine advantage is enhanced decision-making."
-        },
-        {
-          "label": "B",
           "text": "Automatic compliance with all data privacy regulations",
           "correct": false,
           "rationale": "Compliance with regulations like GDPR is a security and privacy challenge, not an automatic advantage; an actual advantage is enhanced decision-making."
         },
         {
-          "label": "C",
-          "text": "Removal of the need for data cleaning and quality control",
+          "label": "B",
+          "text": "Guaranteed elimination of all algorithmic bias",
           "correct": false,
-          "rationale": "Data quality and cleaning remain a recognized data challenge; big data does not remove that need. A genuine advantage is enhanced decision-making."
+          "rationale": "Algorithmic bias is listed as an ethical challenge of big data, not an advantage; big data does not guarantee its elimination. A genuine advantage is enhanced decision-making."
         },
         {
-          "label": "D",
+          "label": "C",
           "text": "Enhanced decision-making through deeper insights",
           "correct": true,
           "rationale": "Enhanced decision-making is an explicitly listed advantage of big data, alongside efficiency, customer insights, and cost-effectiveness."
+        },
+        {
+          "label": "D",
+          "text": "Removal of the need for data cleaning and quality control",
+          "correct": false,
+          "rationale": "Data quality and cleaning remain a recognized data challenge; big data does not remove that need. A genuine advantage is enhanced decision-making."
         }
       ]
     },
@@ -3284,9 +3284,9 @@
         },
         {
           "label": "B",
-          "text": "Scalability is a security and privacy challenge",
+          "text": "Integrating data from multiple sources is an ethical challenge",
           "correct": false,
-          "rationale": "Scalability is a technical challenge (with storage management, real-time processing, and reliability), not a security and privacy challenge."
+          "rationale": "Integration from multiple sources is a data challenge, not an ethical one; ethical challenges include bias, ownership, and responsible AI."
         },
         {
           "label": "C",
@@ -3296,9 +3296,9 @@
         },
         {
           "label": "D",
-          "text": "Integrating data from multiple sources is an ethical challenge",
+          "text": "Scalability is a security and privacy challenge",
           "correct": false,
-          "rationale": "Integration from multiple sources is a data challenge, not an ethical one; ethical challenges include bias, ownership, and responsible AI."
+          "rationale": "Scalability is a technical challenge (with storage management, real-time processing, and reliability), not a security and privacy challenge."
         }
       ]
     }
