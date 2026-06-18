@@ -81,10 +81,6 @@ export function getStoredResult(examId: number): StoredResult {
   };
 }
 
-function badgesHtml(q: Question): string {
-  return q.type === "negation" ? '<span class="badge neg">negation</span>' : "";
-}
-
 function questionHtml(q: Question, index: number): string {
   const opts = q.options
     .map(
@@ -112,7 +108,6 @@ function questionHtml(q: Question, index: number): string {
     <li class="qcard" data-qid="${esc(q.id)}">
       <div class="qhead">
         <span class="qnum">${index + 1}</span>
-        <span class="badges">${badgesHtml(q)}</span>
         <span class="qresult" aria-hidden="true"></span>
       </div>
       <p class="stem">${esc(q.stem)}</p>
