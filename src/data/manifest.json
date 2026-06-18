@@ -1,0 +1,35 @@
+[
+  {
+    "examId": 1,
+    "title": "Practice Exam 1",
+    "total": 100,
+    "chapters": 5,
+    "difficulty": {
+      "easy": 39,
+      "moderate": 42,
+      "challenging": 19
+    }
+  },
+  {
+    "examId": 2,
+    "title": "Practice Exam 2",
+    "total": 100,
+    "chapters": 5,
+    "difficulty": {
+      "easy": 36,
+      "moderate": 48,
+      "challenging": 16
+    }
+  },
+  {
+    "examId": 3,
+    "title": "Practice Exam 3",
+    "total": 100,
+    "chapters": 5,
+    "difficulty": {
+      "easy": 33,
+      "moderate": 47,
+      "challenging": 20
+    }
+  }
+]
